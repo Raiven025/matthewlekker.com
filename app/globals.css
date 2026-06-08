@@ -19,8 +19,12 @@
 body {
   background-color: var(--dark);
   color: #ffffff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant), Georgia, serif;
 }
 
 ::-webkit-scrollbar {
