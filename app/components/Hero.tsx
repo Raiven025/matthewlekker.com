@@ -23,7 +23,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/jackson-foyer-YrDJNazJOLHVElKJ.jpeg)`,
+            backgroundImage: `url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg)`,
           }}
         />
         {/* Deep gradient overlay — different from original */}
@@ -57,8 +57,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-[5rem] md:text-[8rem] lg:text-[10rem] font-light tracking-tight text-white leading-none mb-4"
-          style={{ fontFamily: 'var(--font-cormorant), Georgia, serif' }}
+          className="text-[3.2rem] md:text-[5rem] lg:text-[6.5rem] font-normal tracking-tight text-white leading-[1.05] mb-6"
+          style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
         >
           Framing
           <br />
