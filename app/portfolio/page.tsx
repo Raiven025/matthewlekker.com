@@ -15,7 +15,6 @@ const categories = [
     description: 'Where design meets daily life — capturing the warmth and elegance of residential spaces.',
     image: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/jackson-foyer-YrDJNazJOLHVElKJ.jpeg',
     href: '/portfolio/residential',
-    count: '120+ projects',
   },
   {
     id: 'exterior',
@@ -24,7 +23,6 @@ const categories = [
     description: 'The bold geometry of buildings — form, light, and structure at their finest.',
     image: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/45-0j6a6615-A85MgE71JnFrxlJo.jpg',
     href: '/portfolio/exterior',
-    count: '80+ projects',
   },
   {
     id: 'commercial',
@@ -33,7 +31,6 @@ const categories = [
     description: 'Professional environments that inspire — offices, showrooms, and retail properties.',
     image: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/0j6a3776-mnlJBwyeLEuDyqKw.jpg',
     href: '/portfolio/commercial',
-    count: '150+ projects',
   },
   {
     id: 'hospitality',
@@ -42,7 +39,6 @@ const categories = [
     description: 'Luxury hotels, restaurants, and event spaces — where every detail tells a story.',
     image: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg',
     href: '/portfolio/hospitality',
-    count: '60+ projects',
   },
 ];
 
@@ -74,8 +70,7 @@ function CategoryBlock({ cat, index }: { cat: typeof categories[0]; index: numbe
         <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3">{cat.subtitle}</p>
         <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-4">{cat.title}</h2>
         <div className="w-12 h-px bg-[#c9a96e] mb-6" />
-        <p className="text-white/50 text-base leading-relaxed mb-4">{cat.description}</p>
-        <p className="text-white/25 text-xs tracking-[0.2em] uppercase mb-8">{cat.count}</p>
+        <p className="text-white/50 text-base leading-relaxed mb-8">{cat.description}</p>
         <Link
           href={cat.href}
           className="inline-flex items-center gap-3 text-[#c9a96e] text-xs tracking-[0.3em] uppercase hover:gap-6 transition-all duration-300 group"
