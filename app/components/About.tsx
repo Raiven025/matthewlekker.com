@@ -6,10 +6,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const stats = [
-  { number: '10+', label: 'Years Experience' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '4', label: 'Specializations' },
-  { number: 'NJ', label: 'Based in New Jersey' },
+  { number: '10+', label: 'Years in Architectural Photography' },
+  { number: '500+', label: 'Spaces Photographed' },
+  { number: '48hr', label: 'Edited Image Delivery' },
+  { number: 'Tri-State', label: 'NJ · NY · CT Coverage' },
 ];
 
 export default function About() {

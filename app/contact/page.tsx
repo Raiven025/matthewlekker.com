@@ -29,9 +29,25 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // TODO: Replace with your Formspree endpoint or API route
-    // e.g. await fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: JSON.stringify(form) })
-    await new Promise(r => setTimeout(r, 1000)); // simulate network
+    // Formspree: sign up free at formspree.io → create form → replace YOUR_FORM_ID below
+    // Until then, form shows success UI but does not send email.
+    const FORMSPREE_ID = 'YOUR_FORM_ID';
+    if (FORMSPREE_ID !== 'YOUR_FORM_ID') {
+      try {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(form),
+        });
+        if (!res.ok) throw new Error('Network error');
+      } catch {
+        setLoading(false);
+        alert('Something went wrong. Please email info@matthewlekker.com directly.');
+        return;
+      }
+    } else {
+      await new Promise(r => setTimeout(r, 800));
+    }
     setLoading(false);
     setSubmitted(true);
   };
