@@ -23,7 +23,8 @@
       "WebFetch(domain:matthewlekker.com)",
       "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npx vercel *)"
     ]
   }
 }
