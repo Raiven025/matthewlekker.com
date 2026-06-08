@@ -26,7 +26,7 @@ export default function About() {
             initial={{ opacity: 0, x: -60 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative"
+            className="relative isolate"
           >
             <div className="relative h-[500px] md:h-[600px] overflow-hidden">
               <Image

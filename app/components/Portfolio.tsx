@@ -80,12 +80,9 @@ function CategoryCard({ cat, index }: { cat: typeof categories[0]; index: number
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <p className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-2">{cat.subtitle}</p>
           <h3 className="text-white text-2xl md:text-3xl font-light tracking-wide mb-3">{cat.title}</h3>
-          <motion.p
-            initial={{ opacity: 0, height: 0 }}
-            className="text-white/60 text-sm leading-relaxed overflow-hidden transition-all duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-20"
-          >
+          <p className="text-white/60 text-sm leading-relaxed overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[5rem]">
             {cat.description}
-          </motion.p>
+          </p>
           <div className="flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase">View Work</span>
             <div className="w-8 h-px bg-[#c9a96e]" />

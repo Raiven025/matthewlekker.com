@@ -42,3 +42,18 @@ body {
   background: var(--gold);
   color: var(--dark);
 }
+
+/* Remove default browser focus outlines; use gold ring for keyboard nav */
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Prevent image dragging */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
