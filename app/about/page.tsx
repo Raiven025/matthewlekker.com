@@ -4,8 +4,6 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 const stats = [
   { number: '10+', label: 'Years in Architectural Photography' },
@@ -50,9 +48,7 @@ export default function AboutPage() {
   const processInView = useInView(processRef, { once: true, margin: '-80px' });
 
   return (
-    <>
-      <Navbar />
-      <main className="bg-[#0a0a0a]">
+    <div className="bg-[#0a0a0a]">
 
         {/* Hero */}
         <section ref={heroRef} className="relative h-[50vh] flex items-end pb-16 overflow-hidden">
@@ -211,8 +207,6 @@ export default function AboutPage() {
           </Link>
         </section>
 
-      </main>
-      <Footer />
-    </>
+    </div>
   );
 }

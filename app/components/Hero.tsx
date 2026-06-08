@@ -1,15 +1,17 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
+  const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+  // Disable parallax for users who prefer reduced motion
+  const y = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ['0%', '0%'] : ['0%', '30%']);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
+  const scale = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [1, 1.08]);
 
   return (
     <section ref={ref} className="relative h-screen w-full overflow-hidden flex items-center justify-center">
@@ -43,8 +45,8 @@ export default function Hero() {
         className="relative z-20 text-center px-6 max-w-5xl mx-auto"
       >
         <motion.p
-          initial={{ opacity: 0, letterSpacing: '0.5em' }}
-          animate={{ opacity: 1, letterSpacing: '0.3em' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.3 }}
           className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-6"
         >
@@ -110,7 +112,7 @@ export default function Hero() {
       >
         <span className="text-white/30 text-xs tracking-[0.3em] uppercase">Scroll</span>
         <motion.div
-          animate={{ y: [0, 8, 0] }}
+          animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="w-px h-10 bg-gradient-to-b from-[#c9a96e] to-transparent"
         />

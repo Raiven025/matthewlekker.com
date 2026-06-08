@@ -2,8 +2,6 @@
 
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 const projectTypes = [
   'Residential Interior',
@@ -53,9 +51,7 @@ export default function ContactPage() {
   };
 
   return (
-    <>
-      <Navbar />
-      <main className="bg-[#0a0a0a] min-h-screen">
+    <div className="bg-[#0a0a0a] min-h-screen">
 
         {/* Page Hero */}
         <section className="relative h-[40vh] flex items-end pb-16 overflow-hidden">
@@ -197,8 +193,6 @@ export default function ContactPage() {
 
           </div>
         </section>
-      </main>
-      <Footer />
-    </>
+    </div>
   );
 }

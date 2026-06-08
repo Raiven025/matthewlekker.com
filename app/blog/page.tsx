@@ -2,14 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 export default function BlogPage() {
   return (
-    <>
-      <Navbar />
-      <main className="bg-[#0a0a0a] min-h-screen flex flex-col">
+    <div className="bg-[#0a0a0a] min-h-screen flex flex-col">
 
         {/* Hero */}
         <section className="relative h-[40vh] flex items-end pb-16 overflow-hidden">
@@ -53,8 +49,6 @@ export default function BlogPage() {
           </motion.div>
         </section>
 
-      </main>
-      <Footer />
-    </>
+    </div>
   );
 }

@@ -4,8 +4,6 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 const categories = [
   {
@@ -85,9 +83,7 @@ function CategoryBlock({ cat, index }: { cat: typeof categories[0]; index: numbe
 
 export default function PortfolioPage() {
   return (
-    <>
-      <Navbar />
-      <main className="bg-[#0a0a0a]">
+    <div className="bg-[#0a0a0a]">
 
         {/* Hero */}
         <section className="relative h-[45vh] flex items-end pb-16 overflow-hidden">
@@ -129,8 +125,6 @@ export default function PortfolioPage() {
           </Link>
         </section>
 
-      </main>
-      <Footer />
-    </>
+    </div>
   );
 }
