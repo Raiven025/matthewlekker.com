@@ -77,10 +77,17 @@ export default function Testimonials() {
 
               {/* Attribution */}
               <div className="border-t border-white/5 pt-5 flex items-center gap-4">
-                <div className="w-10 h-10 border border-[#c9a96e]/30 flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#c9a96e] text-xs font-bold">
-                    {t.name !== 'Client Name' ? t.name.split(' ').map(n => n[0]).join('') : '?'}
-                  </span>
+                <div className="w-10 h-10 border border-[#c9a96e]/30 flex items-center justify-center flex-shrink-0 bg-[#c9a96e]/5">
+                  {t.name !== 'Client Name' ? (
+                    <span className="text-[#c9a96e] text-xs font-bold">
+                      {t.name.split(' ').map((n: string) => n[0]).join('')}
+                    </span>
+                  ) : (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  )}
                 </div>
                 <div>
                   <p className="text-white text-sm font-light">{t.name}</p>
