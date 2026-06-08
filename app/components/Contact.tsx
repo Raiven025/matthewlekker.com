@@ -11,26 +11,27 @@ export default function Contact() {
   return (
     <section
       ref={ref}
-      className="relative py-32 px-8 md:px-16 overflow-hidden"
+      className="relative py-36 px-8 md:px-20 overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1408 50%, #0a0a0a 100%)',
       }}
     >
       {/* Background texture */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: 'radial-gradient(circle at 1px 1px, #c9a96e 1px, transparent 0)',
           backgroundSize: '40px 40px',
         }}
       />
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="relative z-10 flex flex-col items-center text-center">
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-6"
+          className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-8"
         >
           Let's Work Together
         </motion.p>
@@ -39,7 +40,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-4xl md:text-6xl font-extralight text-white tracking-tight mb-6 leading-tight"
+          className="text-5xl md:text-7xl font-extralight text-white tracking-tight leading-none mb-8"
         >
           Ready to elevate
           <br />
@@ -50,14 +51,14 @@ export default function Contact() {
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-24 h-px bg-[#c9a96e] mx-auto mb-8"
+          className="w-20 h-px bg-[#c9a96e] mb-10"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-white/50 text-base leading-relaxed mb-12 max-w-lg mx-auto"
+          className="text-white/45 text-base leading-relaxed mb-14 max-w-md text-center"
         >
           Whether you're an architect, designer, developer, or hospitality brand — let's create images that stop people in their tracks.
         </motion.p>
@@ -66,7 +67,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4"
         >
           <Link
             href="/contact"
@@ -76,11 +77,12 @@ export default function Contact() {
           </Link>
           <a
             href="mailto:info@matthewlekker.com"
-            className="border border-white/20 text-white/70 text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#c9a96e] hover:text-[#c9a96e] transition-all duration-300"
+            className="border border-white/20 text-white/60 text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#c9a96e] hover:text-[#c9a96e] transition-all duration-300"
           >
             Send an Email
           </a>
         </motion.div>
+
       </div>
     </section>
   );

@@ -66,12 +66,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col items-center gap-2 text-center">
           <p className="text-white/15 text-xs tracking-wide">
             © {new Date().getFullYear()} Matthew Lekker Photography. All rights reserved.
           </p>
-          <p className="text-white/15 text-xs tracking-[0.2em] uppercase">
-            NJ · NY · CT
+          <p className="text-white/10 text-xs tracking-[0.25em] uppercase">
+            New Jersey · Architecture · Interiors · Hospitality
           </p>
         </div>
 

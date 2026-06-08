@@ -42,15 +42,15 @@ export default function Testimonials() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="bg-[#111111] py-24 px-8 md:px-12">
-      <div className="max-w-7xl mx-auto">
+    <section ref={ref} className="bg-[#0a0a0a] py-28 px-8 md:px-20">
+      <div className="max-w-5xl mx-auto">
 
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-16"
+          className="mb-14"
         >
           <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3">Client Feedback</p>
           <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
@@ -59,7 +59,7 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
