@@ -20,7 +20,7 @@ export default function ImmersiveGallery() {
   const x = useTransform(scrollYProgress, [0, 1], ['0%', '-15%']);
 
   return (
-    <section ref={ref} className="bg-[#0a0a0a] py-24 overflow-hidden">
+    <section ref={ref} className="bg-[#111111] py-28 overflow-hidden">
       <div className="max-w-5xl mx-auto px-8 md:px-20 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,7 +41,7 @@ export default function ImmersiveGallery() {
       </div>
 
       {/* Horizontal scroll strip */}
-      <motion.div style={{ x }} className="flex gap-4 pl-6 w-max">
+      <motion.div style={{ x }} className="flex gap-5 pl-8 md:pl-20 w-max">
         {photos.map((photo, i) => (
           <motion.div
             key={i}

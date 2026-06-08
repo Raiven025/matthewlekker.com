@@ -54,13 +54,13 @@ export default function ContactPage() {
     <div className="bg-[#0a0a0a] min-h-screen">
 
         {/* Page Hero */}
-        <section className="relative h-[40vh] flex items-end pb-16 overflow-hidden">
+        <section className="relative h-[50vh] flex items-end pb-20 overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg)` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
-          <div className="relative z-10 px-8 md:px-12 max-w-7xl mx-auto w-full">
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
+          <div className="relative z-10 px-8 md:px-20 w-full">
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
               className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3"
@@ -73,7 +73,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Content */}
-        <section ref={ref} className="px-8 md:px-12 py-24 max-w-7xl mx-auto">
+        <section ref={ref} className="px-8 md:px-20 py-28 max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-start">
 
             {/* Left — Info */}

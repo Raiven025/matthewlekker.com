@@ -48,27 +48,27 @@ function CategoryBlock({ cat, index }: { cat: typeof categories[0]; index: numbe
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
       className={`grid md:grid-cols-2 gap-0 ${isEven ? '' : 'md:[direction:rtl]'}`}
     >
       {/* Image */}
-      <Link href={cat.href} className="block relative h-[420px] md:h-[560px] overflow-hidden group" style={{ direction: 'ltr' }}>
+      <Link href={cat.href} className="block relative h-[440px] md:h-[580px] overflow-hidden group" style={{ direction: 'ltr' }}>
         <Image
           src={cat.image} alt={cat.title} fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500" />
+        <div className="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-all duration-500" />
       </Link>
 
       {/* Text */}
-      <div className={`bg-[#111111] p-12 md:p-16 flex flex-col justify-center ${isEven ? '' : '[direction:ltr]'}`}>
-        <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3">{cat.subtitle}</p>
-        <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-4">{cat.title}</h2>
-        <div className="w-12 h-px bg-[#c9a96e] mb-6" />
-        <p className="text-white/50 text-base leading-relaxed mb-8">{cat.description}</p>
+      <div className={`bg-[#111111] px-14 md:px-20 py-16 md:py-20 flex flex-col justify-center ${isEven ? '' : '[direction:ltr]'}`}>
+        <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-4">{cat.subtitle}</p>
+        <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-5">{cat.title}</h2>
+        <div className="w-12 h-px bg-[#c9a96e] mb-7" />
+        <p className="text-white/45 text-base leading-relaxed mb-10">{cat.description}</p>
         <Link
           href={cat.href}
           className="inline-flex items-center gap-3 text-[#c9a96e] text-xs tracking-[0.3em] uppercase hover:gap-6 transition-all duration-300 group"
@@ -85,45 +85,45 @@ export default function PortfolioPage() {
   return (
     <div className="bg-[#0a0a0a]">
 
-        {/* Hero */}
-        <section className="relative h-[45vh] flex items-end pb-16 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/0j6a5558-dOqD4bxW1PfxqZBK.jpeg)` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
-          <div className="relative z-10 px-8 md:px-12 max-w-7xl mx-auto w-full">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3"
-            >Selected Work</motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-5xl md:text-6xl font-extralight text-white tracking-tight"
-            >The Portfolio</motion.h1>
-          </div>
-        </section>
+      {/* Hero */}
+      <section className="relative h-[55vh] flex items-end pb-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/0j6a5558-dOqD4bxW1PfxqZBK.jpeg)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
+        <div className="relative z-10 px-8 md:px-20 w-full">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+            className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-4"
+          >Selected Work</motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-5xl md:text-7xl font-extralight text-white tracking-tight leading-none"
+          >The Portfolio</motion.h1>
+        </div>
+      </section>
 
-        {/* Category Blocks */}
-        <section className="divide-y divide-white/5">
-          {categories.map((cat, i) => (
-            <CategoryBlock key={cat.id} cat={cat} index={i} />
-          ))}
-        </section>
+      {/* Category Blocks */}
+      <section className="divide-y divide-white/5">
+        {categories.map((cat, i) => (
+          <CategoryBlock key={cat.id} cat={cat} index={i} />
+        ))}
+      </section>
 
-        {/* CTA */}
-        <section className="px-8 md:px-12 py-24 text-center bg-[#111111]">
-          <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-4">Let's Work Together</p>
-          <h2 className="text-3xl md:text-4xl font-extralight text-white tracking-tight mb-8">
-            Have a project in mind?
-          </h2>
-          <Link
-            href="/contact"
-            className="inline-block bg-[#c9a96e] text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:bg-[#e8d5a3] transition-all duration-300 font-medium"
-          >
-            Book a Shoot
-          </Link>
-        </section>
+      {/* CTA */}
+      <section className="py-28 px-8 md:px-20 text-center bg-[#111111]">
+        <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-5">Let's Work Together</p>
+        <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-10">
+          Have a project in mind?
+        </h2>
+        <Link
+          href="/contact"
+          className="inline-block bg-[#c9a96e] text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:bg-[#e8d5a3] transition-all duration-300 font-medium"
+        >
+          Book a Shoot
+        </Link>
+      </section>
 
     </div>
   );
