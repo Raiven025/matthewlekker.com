@@ -30,7 +30,7 @@ const stats = [
   { display: <CountUp to={10} suffix="+" />, label: 'Years Experience' },
   { display: <CountUp to={500} suffix="+" />, label: 'Spaces Photographed' },
   { display: <CountUp to={48} suffix="hr" />, label: 'Image Delivery' },
-  { display: 'Tri-State', label: 'NJ · NY · CT' },
+  { display: <CountUp to={3} suffix="+" />, label: 'NJ · NY · CT' },
 ];
 
 export default function About() {
