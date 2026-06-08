@@ -101,7 +101,7 @@ export default function Portfolio() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="bg-[#0a0a0a] py-24 px-6">
+    <section className="bg-[#0a0a0a] py-24 px-8 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div ref={ref} className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">

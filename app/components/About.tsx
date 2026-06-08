@@ -17,7 +17,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="bg-[#111111] py-24 px-6 overflow-hidden">
+    <section className="bg-[#111111] py-24 px-8 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div ref={ref} className="grid md:grid-cols-2 gap-16 items-center">
 
