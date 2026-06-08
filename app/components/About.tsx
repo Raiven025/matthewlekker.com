@@ -44,7 +44,7 @@ export default function About() {
       <div className="max-w-5xl mx-auto">
 
         {/* Stats row — top */}
-        <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 mb-24 pb-24 border-b border-white/8">
+        <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-24 pb-24 border-b border-white/8">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -53,7 +53,7 @@ export default function About() {
               transition={{ duration: 0.7, delay: i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-center"
             >
-              <p className="text-[#c9a96e] text-4xl md:text-5xl font-light mb-3 tabular-nums"
+              <p className="text-[#c9a96e] text-3xl md:text-5xl font-light mb-3 tabular-nums"
                 style={{ fontFamily: 'var(--font-raleway), sans-serif' }}>
                 {stat.display}
               </p>

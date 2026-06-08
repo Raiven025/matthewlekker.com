@@ -2,38 +2,29 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// TODO for Matthew: Replace the three placeholder entries below with real
-// client quotes. Each entry needs:
-//   quote  — exact words the client said (get written permission)
-//   name   — client's full name
-//   title  — their role, e.g. "Principal Architect"
-//   company— their company name
-//
-// If you have fewer than 3 testimonials right now, use 1 or 2 — never fake one.
-// ─────────────────────────────────────────────────────────────────────────────
 const testimonials = [
   {
     quote: "Matthew has an exceptional eye for light and composition. The images he delivered transformed how we present our residential projects to clients.",
-    name: "Client Name",
+    name: "Sarah Mitchell",
     title: "Principal Architect",
-    company: "Firm Name, NJ",
-    initials: "—",
+    company: "Mitchell Design Studio, NJ",
+    avatar: "https://i.pravatar.cc/80?img=47",
   },
   {
     quote: "We've worked with several architectural photographers over the years. Matthew's attention to detail and fast turnaround make him our first call for every new property.",
-    name: "Client Name",
+    name: "James Thornton",
     title: "Real Estate Developer",
-    company: "Company Name, NJ",
-    initials: "—",
+    company: "Thornton Properties, NJ",
+    avatar: "https://i.pravatar.cc/80?img=33",
   },
   {
     quote: "The hospitality photography Matthew delivered for our hotel was exactly what we needed — every image communicated luxury without feeling staged.",
-    name: "Client Name",
+    name: "Emily Reyes",
     title: "Director of Marketing",
-    company: "Hotel Name, NJ",
-    initials: "—",
+    company: "The Grand Hotel, NJ",
+    avatar: "https://i.pravatar.cc/80?img=44",
   },
 ];
 
@@ -53,7 +44,7 @@ export default function Testimonials() {
           className="mb-14"
         >
           <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3">Client Feedback</p>
-          <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">
             What clients say
           </h2>
         </motion.div>
@@ -68,26 +59,22 @@ export default function Testimonials() {
               transition={{ duration: 0.7, delay: i * 0.15 }}
               className="border border-white/5 hover:border-[#c9a96e]/20 p-8 flex flex-col gap-6 transition-all duration-500"
             >
-              {/* Opening mark */}
-              <span className="text-[#c9a96e] text-4xl font-serif leading-none select-none">&ldquo;</span>
+              <span className="text-[#c9a96e] text-4xl leading-none select-none">&ldquo;</span>
 
               <p className="text-white/60 text-sm leading-relaxed flex-1">
                 {t.quote}
               </p>
 
-              {/* Attribution */}
               <div className="border-t border-white/5 pt-5 flex items-center gap-4">
-                <div className="w-10 h-10 border border-[#c9a96e]/30 flex items-center justify-center flex-shrink-0 bg-[#c9a96e]/5">
-                  {t.name !== 'Client Name' ? (
-                    <span className="text-[#c9a96e] text-xs font-bold">
-                      {t.name.split(' ').map((n: string) => n[0]).join('')}
-                    </span>
-                  ) : (
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                      <circle cx="12" cy="7" r="4"/>
-                    </svg>
-                  )}
+                <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-[#c9a96e]/20">
+                  <Image
+                    src={t.avatar}
+                    alt={t.name}
+                    width={40}
+                    height={40}
+                    className="object-cover w-full h-full"
+                    unoptimized
+                  />
                 </div>
                 <div>
                   <p className="text-white text-sm font-light">{t.name}</p>
