@@ -31,7 +31,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-6">
-              Award-winning architectural &amp; interior photography based in New Jersey, serving the Tri-State Area and beyond.
+              Architectural &amp; interior photography based in New Jersey, serving architects, designers, and hospitality brands across the Tri-State Area.
             </p>
             {/* Social */}
             <a
