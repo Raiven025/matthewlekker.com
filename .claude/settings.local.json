@@ -10,7 +10,20 @@
       "Bash(git branch *)",
       "Bash(git remote *)",
       "Bash(git config *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__read_page",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "mcp__Claude_in_Chrome__find",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "Read(//c/Users/Raiven/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/7e05dd9d-d731-4ddb-a35a-5850fffaf1e3/618d0487-935f-42c0-bc48-4cee4c629795/skills/docx/**)",
+      "Bash(extract-text \"C:\\\\Users\\\\Raiven\\\\My Files\\\\Clients 2026\\\\Matthew 06.06.2026\\\\Matthew_Masterplan.docx\")",
+      "Bash(pandoc \"C:\\\\Users\\\\Raiven\\\\My Files\\\\Clients 2026\\\\Matthew 06.06.2026\\\\Matthew_Masterplan.docx\" -t markdown)",
+      "WebFetch(domain:matthewlekker.com)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
     ]
   }
 }
