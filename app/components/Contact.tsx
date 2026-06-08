@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <section
       ref={ref}
-      className="relative py-32 px-6 overflow-hidden"
+      className="relative py-32 px-8 md:px-16 overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1408 50%, #0a0a0a 100%)',
       }}
