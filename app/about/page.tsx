@@ -103,7 +103,7 @@ export default function AboutPage() {
             <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-5">The Story</p>
             <h2 className="text-3xl md:text-4xl font-extralight text-white tracking-tight mb-6 leading-tight">
               Capturing the art<br />
-              <em className="italic text-[#c9a96e]">behind every space</em>
+              <span className="text-[#c9a96e]">behind every space</span>
             </h2>
             <div className="w-16 h-px bg-[#c9a96e] mb-8" />
             <p className="text-white/55 text-base leading-relaxed mb-6">
@@ -209,7 +209,7 @@ export default function AboutPage() {
         <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-5">Ready?</p>
         <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-10">
           Let's create something<br />
-          <em className="italic text-[#c9a96e]">extraordinary.</em>
+          <span className="text-[#c9a96e]">extraordinary.</span>
         </h2>
         <Link
           href="/contact"

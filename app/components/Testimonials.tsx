@@ -71,7 +71,7 @@ export default function Testimonials() {
               {/* Opening mark */}
               <span className="text-[#c9a96e] text-4xl font-serif leading-none select-none">&ldquo;</span>
 
-              <p className="text-white/60 text-sm leading-relaxed flex-1 italic">
+              <p className="text-white/60 text-sm leading-relaxed flex-1">
                 {t.quote}
               </p>
 

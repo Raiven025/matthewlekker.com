@@ -57,12 +57,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-[3.2rem] md:text-[5rem] lg:text-[6.5rem] font-normal tracking-tight text-white leading-[1.05] mb-6"
-          style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
+          className="text-[3.2rem] md:text-[5rem] lg:text-[6.5rem] font-light tracking-wide text-white leading-[1.1] mb-6"
+          style={{ fontFamily: 'var(--font-raleway), sans-serif' }}
         >
           Framing
           <br />
-          <em className="italic text-[#c9a96e]">Spaces</em>
+          <span className="text-[#c9a96e]">Spaces</span>
           <br />
           with Soul
         </motion.h1>
@@ -104,14 +104,13 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll line indicator — no text */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
       >
-        <span className="text-white/30 text-xs tracking-[0.3em] uppercase">Scroll</span>
         <motion.div
           animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}

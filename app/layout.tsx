@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Raleway, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const playfair = Playfair_Display({
+const raleway = Raleway({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-playfair",
+  weight: ["200", "300", "400", "500", "600"],
+  style: ["normal"],
+  variable: "--font-raleway",
   display: "swap",
 });
 
@@ -54,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased ${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`h-full antialiased ${raleway.variable} ${inter.variable}`}>
       <head>
         {/* Preload hero image — it is the LCP element on the homepage */}
         <link

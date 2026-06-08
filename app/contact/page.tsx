@@ -85,7 +85,7 @@ export default function ContactPage() {
               <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-4">Get in Touch</p>
               <h2 className="text-3xl md:text-4xl font-extralight text-white tracking-tight mb-6 leading-tight">
                 Ready to elevate<br />
-                <em className="italic text-[#c9a96e]">your space?</em>
+                <span className="text-[#c9a96e]">your space?</span>
               </h2>
               <div className="w-16 h-px bg-[#c9a96e] mb-8" />
               <p className="text-white/50 text-base leading-relaxed mb-10">

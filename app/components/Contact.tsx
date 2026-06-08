@@ -44,7 +44,7 @@ export default function Contact() {
         >
           Ready to elevate
           <br />
-          <em className="italic text-[#c9a96e]">your space?</em>
+          <span className="text-[#c9a96e]">your space?</span>
         </motion.h2>
 
         <motion.div

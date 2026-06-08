@@ -25,7 +25,8 @@
       "Bash(npm install *)",
       "Bash(npm run *)",
       "Bash(npx vercel *)",
-      "Bash(curl -s -L \"https://assets.zyrosite.com/cdn-cgi/image/format=jpg,w=1200,h=630,fit=crop/AMqlLZQweECGbqM2/45-0j6a6615-A85MgE71JnFrxlJo.jpg\" -o \"C:/Users/Raiven/CascadeProjects/matthewlekker.com/public/og-image.jpg\")"
+      "Bash(curl -s -L \"https://assets.zyrosite.com/cdn-cgi/image/format=jpg,w=1200,h=630,fit=crop/AMqlLZQweECGbqM2/45-0j6a6615-A85MgE71JnFrxlJo.jpg\" -o \"C:/Users/Raiven/CascadeProjects/matthewlekker.com/public/og-image.jpg\")",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }

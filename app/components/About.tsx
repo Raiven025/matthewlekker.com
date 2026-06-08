@@ -54,7 +54,7 @@ export default function About() {
               className="text-center"
             >
               <p className="text-[#c9a96e] text-4xl md:text-5xl font-light mb-3 tabular-nums"
-                style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+                style={{ fontFamily: 'var(--font-raleway), sans-serif' }}>
                 {stat.display}
               </p>
               <p className="text-white/35 text-[10px] tracking-[0.3em] uppercase leading-relaxed">{stat.label}</p>
@@ -74,7 +74,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight mb-6">
             Capturing the art
             <br />
-            <em className="italic text-[#c9a96e]">behind every space</em>
+            <span className="text-[#c9a96e]">behind every space</span>
           </h2>
           <div className="w-12 h-px bg-[#c9a96e] mx-auto mb-8" />
           <p className="text-white/50 text-base leading-relaxed mb-5">
