@@ -14,102 +14,117 @@ const photos = [
 ];
 
 export default function ImmersiveGallery() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef(null);
+  // Outer tall container — provides the vertical scroll distance
+  const containerRef = useRef<HTMLDivElement>(null);
+  // Sticky inner — pins to viewport while container scrolls past
+  const stickyRef = useRef<HTMLDivElement>(null);
+  // The image strip — we measure its full width
   const trackRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef(null);
+
   const inView = useInView(headerRef, { once: true, margin: '-50px' });
   const prefersReducedMotion = useReducedMotion();
-  const [dragLimit, setDragLimit] = useState(0);
+  const [translateX, setTranslateX] = useState(0);
 
-  // Scroll-driven zoom: images breathe in/out as section passes through viewport
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  });
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.4, 0.6, 1],
-    prefersReducedMotion ? [1, 1, 1, 1] : [1.12, 1, 1, 1.12]
-  );
-
+  // Measure how far the strip overflows the viewport
   useEffect(() => {
     const calc = () => {
-      if (trackRef.current) {
-        const track = trackRef.current;
-        setDragLimit(Math.max(0, track.scrollWidth - track.parentElement!.clientWidth));
+      if (trackRef.current && stickyRef.current) {
+        const overflow = trackRef.current.scrollWidth - stickyRef.current.clientWidth;
+        setTranslateX(Math.max(0, overflow));
       }
     };
-    calc();
+    const t = setTimeout(calc, 150); // after images render
     window.addEventListener('resize', calc);
-    return () => window.removeEventListener('resize', calc);
+    return () => { clearTimeout(t); window.removeEventListener('resize', calc); };
   }, []);
 
+  // scrollYProgress 0→1 maps to the full container scroll
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start start', 'end end'],
+  });
+
+  // Horizontal drift: strip moves left as you scroll down
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    prefersReducedMotion ? [0, 0] : [0, -translateX]
+  );
+
+  // Zoom: images breathe as strip sweeps across
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.35, 0.65, 1],
+    prefersReducedMotion ? [1, 1, 1, 1] : [1.1, 1, 1, 1.1]
+  );
+
   return (
-    <section ref={sectionRef} className="bg-[#111111] py-28 overflow-hidden">
-      {/* Header */}
-      <div ref={headerRef} className="max-w-5xl mx-auto px-8 md:px-20 mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="flex items-end justify-between"
-        >
-          <div>
-            <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3">Gallery</p>
-            <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">The Work</h2>
-          </div>
-          <p className="text-white/30 text-xs tracking-[0.3em] uppercase hidden md:block select-none">
-            Drag to explore →
-          </p>
-        </motion.div>
-      </div>
+    // Tall wrapper — 300vh gives plenty of scroll room on all devices
+    <div ref={containerRef} style={{ height: '300vh' }}>
+      {/* Sticky panel — locks to viewport during container scroll */}
+      <div
+        ref={stickyRef}
+        className="sticky top-0 h-screen bg-[#111111] overflow-hidden flex flex-col justify-center"
+      >
+        {/* Header */}
+        <div ref={headerRef} className="max-w-5xl mx-auto px-8 md:px-20 mb-10 w-full flex-shrink-0">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="flex items-end justify-between"
+          >
+            <div>
+              <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3">Gallery</p>
+              <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">The Work</h2>
+            </div>
+            <p className="text-white/30 text-xs tracking-[0.3em] uppercase hidden md:block">
+              Scroll to explore →
+            </p>
+          </motion.div>
+        </div>
 
-      {/* Draggable + zoom strip */}
-      <div className="overflow-hidden cursor-grab active:cursor-grabbing select-none">
-        <motion.div
-          ref={trackRef}
-          drag="x"
-          dragConstraints={{ left: -dragLimit, right: 0 }}
-          dragElastic={0.08}
-          dragMomentum={true}
-          className="flex gap-4 pl-8 md:pl-20 pr-8 md:pr-20 w-max"
-          style={{ touchAction: 'pan-x' }}
-        >
-          {photos.map((photo, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="relative flex-shrink-0 overflow-hidden pointer-events-none"
-              style={{
-                width: photo.tall ? '280px' : '220px',
-                height: photo.tall ? '420px' : '340px',
-              }}
-            >
-              {/* Inner image scales independently — creates zoom-within-crop effect */}
+        {/* Scroll-driven horizontal strip */}
+        <div className="overflow-hidden flex-shrink-0">
+          <motion.div
+            ref={trackRef}
+            style={{ x }}
+            className="flex gap-4 pl-8 md:pl-20 pr-8 md:pr-20 w-max"
+          >
+            {photos.map((photo, i) => (
               <motion.div
-                className="absolute inset-0"
-                style={{ scale }}
+                key={i}
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.7, delay: i * 0.1 }}
+                className="relative flex-shrink-0 overflow-hidden"
+                style={{
+                  width: photo.tall ? '280px' : '220px',
+                  height: photo.tall ? '420px' : '340px',
+                }}
               >
-                <Image
-                  src={photo.src}
-                  alt={`Gallery photo ${i + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="320px"
-                  draggable={false}
-                />
+                {/* Image scales within cropped frame */}
+                <motion.div className="absolute inset-0" style={{ scale }}>
+                  <Image
+                    src={photo.src}
+                    alt={`Gallery photo ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="320px"
+                    draggable={false}
+                  />
+                </motion.div>
               </motion.div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+            ))}
+          </motion.div>
+        </div>
 
-      {/* Mobile hint */}
-      <p className="text-white/20 text-xs tracking-[0.3em] uppercase text-center mt-8 md:hidden select-none">
-        Swipe to explore
-      </p>
-    </section>
+        {/* Mobile hint */}
+        <p className="text-white/20 text-[10px] tracking-[0.3em] uppercase text-center mt-8 md:hidden flex-shrink-0">
+          Scroll to explore
+        </p>
+      </div>
+    </div>
   );
 }
