@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 
 const photos = [
@@ -14,17 +14,29 @@ const photos = [
 ];
 
 export default function ImmersiveGallery() {
+  const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef(null);
-  const inView = useInView(headerRef, { once: true, margin: '-50px' });
-
   const trackRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(headerRef, { once: true, margin: '-50px' });
+  const prefersReducedMotion = useReducedMotion();
   const [dragLimit, setDragLimit] = useState(0);
+
+  // Scroll-driven zoom: images breathe in/out as section passes through viewport
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  });
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    prefersReducedMotion ? [1, 1, 1, 1] : [1.12, 1, 1, 1.12]
+  );
 
   useEffect(() => {
     const calc = () => {
       if (trackRef.current) {
         const track = trackRef.current;
-        setDragLimit(track.scrollWidth - track.parentElement!.clientWidth);
+        setDragLimit(Math.max(0, track.scrollWidth - track.parentElement!.clientWidth));
       }
     };
     calc();
@@ -33,7 +45,7 @@ export default function ImmersiveGallery() {
   }, []);
 
   return (
-    <section className="bg-[#111111] py-28 overflow-hidden">
+    <section ref={sectionRef} className="bg-[#111111] py-28 overflow-hidden">
       {/* Header */}
       <div ref={headerRef} className="max-w-5xl mx-auto px-8 md:px-20 mb-12">
         <motion.div
@@ -52,7 +64,7 @@ export default function ImmersiveGallery() {
         </motion.div>
       </div>
 
-      {/* Draggable strip */}
+      {/* Draggable + zoom strip */}
       <div className="overflow-hidden cursor-grab active:cursor-grabbing select-none">
         <motion.div
           ref={trackRef}
@@ -66,8 +78,8 @@ export default function ImmersiveGallery() {
           {photos.map((photo, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="relative flex-shrink-0 overflow-hidden pointer-events-none"
               style={{
@@ -75,14 +87,20 @@ export default function ImmersiveGallery() {
                 height: photo.tall ? '420px' : '340px',
               }}
             >
-              <Image
-                src={photo.src}
-                alt={`Gallery photo ${i + 1}`}
-                fill
-                className="object-cover"
-                sizes="320px"
-                draggable={false}
-              />
+              {/* Inner image scales independently — creates zoom-within-crop effect */}
+              <motion.div
+                className="absolute inset-0"
+                style={{ scale }}
+              >
+                <Image
+                  src={photo.src}
+                  alt={`Gallery photo ${i + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="320px"
+                  draggable={false}
+                />
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
