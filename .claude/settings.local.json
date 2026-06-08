@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth *)",
+      "Bash(Start-Sleep -Seconds 3)",
+      "Bash(Get-Content \"C:\\\\Users\\\\Raiven\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Raiven-CascadeProjects-matthewlekker-com\\\\cdd8262a-c553-44a2-9b3a-9a3c5c287cb5\\\\tasks\\\\bqxwrvofp.output\" -ErrorAction SilentlyContinue)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git config *)",
+      "Bash(git push *)"
+    ]
+  }
+}
