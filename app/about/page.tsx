@@ -9,7 +9,7 @@ const stats = [
   { number: '10+', label: 'Years in Architectural Photography' },
   { number: '500+', label: 'Spaces Photographed' },
   { number: '48hr', label: 'Edited Image Delivery' },
-  { number: 'Tri-State', label: 'NJ · NY · CT Coverage' },
+  { number: '3+', label: 'NJ · NY · CT Coverage' },
 ];
 
 const services = [

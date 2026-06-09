@@ -5,11 +5,20 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=600,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=600,fit=crop/AMqlLZQweECGbqM2/45-0j6a6615-A85MgE71JnFrxlJo.jpg', alt: 'Contemporary residential architecture exterior — NJ architecture photography' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=600,fit=crop/AMqlLZQweECGbqM2/dji_0558-YbNJgXeaV7Szz4Q8.jpeg', alt: 'Aerial view of residential building, architectural photography NJ' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=600,fit=crop/AMqlLZQweECGbqM2/0j6a9894-YleQZR60rLUvLLWP.jpg', alt: 'Architectural facade detail with dramatic light and shadow' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=600,fit=crop/AMqlLZQweECGbqM2/lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', alt: 'Modern building exterior — NJ architecture photography' },
+  { src: BASE + '45-0j6a6615-A85MgE71JnFrxlJo.jpg', alt: 'Contemporary residential architecture exterior — NJ architecture photography' },
+  { src: BASE + 'dji_0558-YbNJgXeaV7Szz4Q8.jpeg', alt: 'Aerial view of residential building — architectural photography NJ' },
+  { src: BASE + 'dji_0363-enhanced-nr-AGBbN8zD90UkEEjr.jpg', alt: 'Aerial drone architecture shot — exterior photography NJ' },
+  { src: BASE + 'dji_0455-mv0JoOPnJ5t3jJjz.jpg', alt: 'Residential exterior from above — drone architecture photography NJ' },
+  { src: BASE + 'dji_0475-mp8J0EgBy8Tvl2NG.jpg', alt: 'Architectural exterior drone view — NJ photography' },
+  { src: BASE + 'dji_0519-enhanced-nr-YNq281MWRoTQjvRk.jpg', alt: 'Exterior architecture with dramatic sky — NJ aerial photography' },
+  { src: BASE + '0j6a0773-mjEGWln3EetQbObv.jpg', alt: 'Residential exterior facade — NJ architectural photography' },
+  { src: BASE + '0j6a9727-YKbl9ZQEn1TBkz6E.jpg', alt: 'Modern architecture exterior — New Jersey photography' },
+  { src: BASE + 'macdonald-18-YKbl9Z4LP8HjpGGD.jpg', alt: 'MacDonald residence exterior — NJ architecture photography' },
+  { src: BASE + 'macdonald-24-mnlJBDwpE2hEMvo8.jpg', alt: 'MacDonald property — architectural exterior photography NJ' },
+  { src: BASE + 'macdonald-3-YZ9j4qGLB5TKEe6V.jpg', alt: 'MacDonald residence — exterior architecture photography' },
+  { src: BASE + 'macdonald-4-AMq8Pe91a7uqpjx2.jpg', alt: 'MacDonald residence exterior detail — NJ architecture' },
 ];
 
 export default function ExteriorPage() {

@@ -5,11 +5,18 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg', alt: 'Luxury hotel room interior photography — NJ hospitality' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', alt: 'Hotel lobby with warm ambient lighting, NJ hospitality photography' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/0j6a9894-YleQZR60rLUvLLWP.jpg', alt: 'Restaurant interior photography — venue photography NJ' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', alt: 'Event venue interior — hospitality photography New Jersey' },
+  { src: BASE + 'hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg', alt: 'Luxury hotel room interior photography — NJ hospitality' },
+  { src: BASE + 'foyer-3-AQEezpRyNMtqZ7v1.jpeg', alt: 'Hotel foyer — hospitality photography NJ' },
+  { src: BASE + 'foyer-bar-A1az6J2BkRtWbaeG.jpeg', alt: 'Hotel bar and foyer — NJ hospitality interior photography' },
+  { src: BASE + 'foyer-check-in-24-dOqZw4o3GyigNEeR.jpg', alt: 'Hotel check-in desk — hospitality photography New Jersey' },
+  { src: BASE + 'red-room-m7VDNKnvvOseg1yY.jpeg', alt: 'Luxury hotel room with red accents — NJ hospitality photography' },
+  { src: BASE + 'wellness-room-1-YX4jOb6nbotwnw1Q.jpeg', alt: 'Hotel wellness room — NJ hospitality interior photography' },
+  { src: BASE + 'wellness-room-A3QlxJzjbyIZ07oj.jpeg', alt: 'Hotel spa and wellness — hospitality photography NJ' },
+  { src: BASE + 'lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', alt: 'Hotel lobby with warm ambient lighting — NJ hospitality photography' },
+  { src: BASE + '0j6a9894-YleQZR60rLUvLLWP.jpg', alt: 'Restaurant and venue interior — hospitality photography NJ' },
+  { src: BASE + 'lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', alt: 'Event venue interior — hospitality photography New Jersey' },
 ];
 
 export default function HospitalityPage() {

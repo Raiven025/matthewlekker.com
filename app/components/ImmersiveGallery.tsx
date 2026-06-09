@@ -4,13 +4,26 @@ import { useRef, useState, useEffect } from 'react';
 import { motion, useInView, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 
+const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', tall: false },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/0j6a5537-2-m7VbKpjeLeF7BQ75.jpeg', tall: true },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/0j6a5558-dOqD4bxW1PfxqZBK.jpeg', tall: false },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', tall: true },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/lekk1943-dxo_deepprime-3-large-qMiLUo6Isoibz7nm.jpeg', tall: false },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/0j6a9894-YleQZR60rLUvLLWP.jpg', tall: true },
+  { src: BASE + 'jackson-foyer-YrDJNazJOLHVElKJ.jpeg', tall: false },
+  { src: BASE + 'lekk4112-dxo_deepprime-3-large-TXZRTuhKwbuFVhmO.jpeg', tall: true },
+  { src: BASE + '0j6a3776-mnlJBwyeLEuDyqKw.jpg', tall: false },
+  { src: BASE + 'lekk5172-dxo_deepprime-3-large-rXe5eGMkw8wyYGl4.jpeg', tall: true },
+  { src: BASE + 'hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg', tall: false },
+  { src: BASE + 'lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', tall: true },
+  { src: BASE + '45-0j6a6615-A85MgE71JnFrxlJo.jpg', tall: false },
+  { src: BASE + 'lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', tall: true },
+  { src: BASE + 'foyer-bar-A1az6J2BkRtWbaeG.jpeg', tall: false },
+  { src: BASE + 'lekk4547-dxo_deepprime-3-large-rCZhkItTjgM4fGsy.jpeg', tall: true },
+  { src: BASE + '0j6a5537-2-m7VbKpjeLeF7BQ75.jpeg', tall: false },
+  { src: BASE + 'dji_0558-YbNJgXeaV7Szz4Q8.jpeg', tall: true },
+  { src: BASE + 'red-room-m7VDNKnvvOseg1yY.jpeg', tall: false },
+  { src: BASE + 'lekk1943-dxo_deepprime-3-large-qMiLUo6Isoibz7nm.jpeg', tall: true },
+  { src: BASE + '0j6a9894-YleQZR60rLUvLLWP.jpg', tall: false },
+  { src: BASE + 'lekk4707-dxo_deepprime-3-large-wDrKHCtFPLut43Uo.jpeg', tall: true },
+  { src: BASE + '0j6a9750-ALpPl48wpeSbwQRV.jpg', tall: false },
+  { src: BASE + 'macdonald-3-YZ9j4qGLB5TKEe6V.jpg', tall: true },
 ];
 
 export default function ImmersiveGallery() {

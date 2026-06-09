@@ -5,11 +5,21 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/0j6a3776-mnlJBwyeLEuDyqKw.jpg', alt: 'Commercial office space interior photography — NJ' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/0j6a9894-YleQZR60rLUvLLWP.jpg', alt: 'Modern office interior with open floor plan, NJ commercial photography' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/0j6a5537-2-m7VbKpjeLeF7BQ75.jpeg', alt: 'Commercial showroom interior — professional photography NJ' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', alt: 'Commercial interior with architectural lighting — NJ' },
+  { src: BASE + '0j6a3776-mnlJBwyeLEuDyqKw.jpg', alt: 'Commercial restaurant interior — NJ photography' },
+  { src: BASE + '0j6a3624-AQEZMrELvGsvM66v.jpg', alt: 'Commercial interior space — professional photography NJ' },
+  { src: BASE + '0j6a3720-1-mv0JoGXe5nI35bGB.jpg', alt: 'Commercial photography — modern interior NJ' },
+  { src: BASE + '0j6a3740-mp8J0QGP1puROZaq.jpg', alt: 'Commercial space interior — architectural photography NJ' },
+  { src: BASE + '0j6a1063-enhanced-nr-AE0r04GEvBH8V4x8.jpeg', alt: 'Commercial interior photography — NJ professional' },
+  { src: BASE + '0j6a1079-enhanced-nr-YleQeyGzw1t4keb3.jpeg', alt: 'Commercial space — interior photography New Jersey' },
+  { src: BASE + '0j6a1097-enhanced-nr-m7VbVKG2pMHe1PXo.jpeg', alt: 'Professional commercial interior — NJ photography' },
+  { src: BASE + '0j6a6597-AQEZMgMDNguQp82e.jpg', alt: 'Commercial interior design photography — NJ' },
+  { src: BASE + '0j6a6626-AQEZMgMD13TWb6X7.jpg', alt: 'Commercial space photography — New Jersey' },
+  { src: BASE + '0j6a6646-m6Lb5B5jOLuloaEd.jpg', alt: 'Interior commercial photography — NJ professional' },
+  { src: BASE + 'dji_0543-m5KnkDebrqiw1p5D.jpeg', alt: 'Aerial commercial property — drone photography NJ' },
+  { src: BASE + 'dji_0594-YleQbNzyZkc9ExLB.jpeg', alt: 'Commercial exterior aerial — architectural photography NJ' },
+  { src: BASE + 'dji_0597-1-YX4xVLGPQvCk365q.jpeg', alt: 'Commercial property drone shot — NJ architecture photography' },
 ];
 
 export default function CommercialPage() {

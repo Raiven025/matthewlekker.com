@@ -5,13 +5,31 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=900,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=900,fit=crop/AMqlLZQweECGbqM2/jackson-foyer-YrDJNazJOLHVElKJ.jpeg', alt: 'Elegant residential foyer with natural light — NJ interior photography' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=900,fit=crop/AMqlLZQweECGbqM2/lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', alt: 'Open-plan living space with architectural details' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=900,fit=crop/AMqlLZQweECGbqM2/0j6a5537-2-m7VbKpjeLeF7BQ75.jpeg', alt: 'Contemporary kitchen interior, NJ residential project' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=900,fit=crop/AMqlLZQweECGbqM2/0j6a5558-dOqD4bxW1PfxqZBK.jpeg', alt: 'Interior design detail — residential photography NJ' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=900,fit=crop/AMqlLZQweECGbqM2/lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', alt: 'Primary bedroom with custom lighting and finishes' },
-  { src: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=900,fit=crop/AMqlLZQweECGbqM2/lekk1943-dxo_deepprime-3-large-qMiLUo6Isoibz7nm.jpeg', alt: 'Formal dining room, residential interior photography NJ' },
+  { src: BASE + 'jackson-foyer-YrDJNazJOLHVElKJ.jpeg', alt: 'Elegant residential foyer with natural light — NJ interior photography' },
+  { src: BASE + 'lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', alt: 'Open-plan living space with architectural details' },
+  { src: BASE + 'lekk5172-dxo_deepprime-3-large-rXe5eGMkw8wyYGl4.jpeg', alt: 'Luxury bathroom with stone and wood detailing — NJ residential' },
+  { src: BASE + '0j6a5537-2-m7VbKpjeLeF7BQ75.jpeg', alt: 'Contemporary kitchen interior, NJ residential project' },
+  { src: BASE + '0j6a5558-dOqD4bxW1PfxqZBK.jpeg', alt: 'Interior design detail — residential photography NJ' },
+  { src: BASE + 'lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', alt: 'Primary bedroom with custom lighting and finishes' },
+  { src: BASE + 'lekk1943-dxo_deepprime-3-large-qMiLUo6Isoibz7nm.jpeg', alt: 'Formal dining room, residential interior photography NJ' },
+  { src: BASE + 'lekk4211-dxo_deepprime-3-large-qi1Kd47OVLpz7awv.jpeg', alt: 'Residential living area with designer furnishings — NJ' },
+  { src: BASE + 'lekk4547-dxo_deepprime-3-large-rCZhkItTjgM4fGsy.jpeg', alt: 'Bright interior space with custom millwork — NJ home' },
+  { src: BASE + 'lekk4707-dxo_deepprime-3-large-wDrKHCtFPLut43Uo.jpeg', alt: 'Elegant residential interior — architectural photography NJ' },
+  { src: BASE + 'lekk4952-dxo_deepprime-3-copy-large-MgIOP6AtqBhqnsZl.jpeg', alt: 'Luxury home interior — NJ residential photography' },
+  { src: BASE + 'lekk4971-dxo_deepprime-3-large-2-KGEsI5MtjzlQNX7Y.jpeg', alt: 'Custom residential interior with natural light — NJ' },
+  { src: BASE + 'lekk5016-dxo_deepprime-3-large-wxEzJfncqTDmVl4c.jpeg', alt: 'Open-concept living and dining area — NJ home photography' },
+  { src: BASE + 'lekk5351-dxo_deepprime-3-large-zt6jfCoQeBngg4JZ.jpeg', alt: 'Residential interior with architectural lighting — NJ' },
+  { src: BASE + 'lekk1860-dxo_deepprime-3-large-sVwujzWIH1xtsMEc.jpeg', alt: 'Interior detail — residential photography New Jersey' },
+  { src: BASE + '0j6a0717-mxBXB71Z8WcR761y.jpg', alt: 'Residential interior photography — NJ home' },
+  { src: BASE + '0j6a0819-YrDJDNovM5SQxEjx.jpg', alt: 'Modern residential interior — architectural photography NJ' },
+  { src: BASE + '0j6a5517-YKblrJp44piZxGPb.jpeg', alt: 'Custom kitchen design — NJ residential interior photography' },
+  { src: BASE + '0j6a5695-dJob4JVy2vs0wNBo.jpeg', alt: 'Residential living space — interior photography NJ' },
+  { src: BASE + '0j6a7413-AMq8PePjXNujV27G.jpg', alt: 'Home interior with designer details — NJ photography' },
+  { src: BASE + '0j6a9894-YleQZR60rLUvLLWP.jpg', alt: 'Architectural interior — residential photography New Jersey' },
+  { src: BASE + '0j6a9933-ALpPl4OG9ZS3qelV.jpg', alt: 'Residential interior photography — NJ luxury home' },
+  { src: BASE + 'macdonald-3-mp8J0ypqGEixg7lN.jpg', alt: 'MacDonald residence — interior photography NJ' },
 ];
 
 export default function ResidentialPage() {
