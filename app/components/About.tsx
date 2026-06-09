@@ -78,10 +78,10 @@ export default function About() {
           </h2>
           <div className="w-12 h-px bg-[#c9a96e] mx-auto mb-8" />
           <p className="text-white/50 text-base leading-relaxed mb-5">
-            Based in New Jersey, Matthew Lekker is an architectural and interior photographer with a passion for revealing the soul of spaces — from intimate residential interiors to grand commercial landmarks.
+            I'm Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography — working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
           </p>
           <p className="text-white/50 text-base leading-relaxed mb-12">
-            With a keen eye for light, geometry, and atmosphere, Matthew transforms spaces into visual stories that resonate with architects, designers, builders, and hospitality brands across the Tri-State Area.
+            Clients come to me for my calm creative direction, editorial eye, and the ability to make spaces feel as good as they look — rooted in natural light, thoughtful composition, and a deep respect for the craft of design.
           </p>
           <Link
             href="/about"

@@ -83,12 +83,12 @@ export default function AboutPage() {
           >
             <div className="relative h-[540px] overflow-hidden">
               <Image
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/lekk5172-dxo_deepprime-3-large-rXe5eGMkw8wyYGl4.jpeg"
-                alt="Matthew Lekker — Architectural Photographer"
-                fill className="object-cover"
+                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=900,fit=crop/AMqlLZQweECGbqM2/1612275894979-mePJN4ke0NU5KGan.jpeg"
+                alt="Matthew Lesperance — Architectural & Interior Photographer, New Jersey"
+                fill className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
             <div className="absolute -bottom-5 -right-5 w-3/4 h-3/4 border border-[#c9a96e]/20 -z-10" />
             <div className="absolute -top-5 -left-5 w-20 h-20 border-t border-l border-[#c9a96e]" />
@@ -100,20 +100,20 @@ export default function AboutPage() {
             animate={bioInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-5">The Story</p>
+            <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-5">Elevated Perspectives</p>
             <h2 className="text-3xl md:text-4xl font-extralight text-white tracking-tight mb-6 leading-tight">
-              Capturing the art<br />
-              <span className="text-[#c9a96e]">behind every space</span>
+              Where storytelling<br />
+              <span className="text-[#c9a96e]">meets structure</span>
             </h2>
             <div className="w-16 h-px bg-[#c9a96e] mb-8" />
             <p className="text-white/55 text-base leading-relaxed mb-6">
-              Based in New Jersey, Matthew Lekker is an architectural and interior photographer with a passion for revealing the soul of spaces — from intimate residential interiors to grand commercial landmarks.
+              I'm Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography — working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
             </p>
             <p className="text-white/55 text-base leading-relaxed mb-6">
-              With a keen eye for light, geometry, and atmosphere, Matthew transforms spaces into visual stories that resonate with architects, interior designers, builders, and hospitality brands across the Tri-State Area.
+              Clients come to me for my calm creative direction, editorial eye, and the ability to make spaces feel as good as they look. With years of hands-on experience, I've built a signature style rooted in natural light, thoughtful composition, and a deep respect for the craft of design.
             </p>
             <p className="text-white/55 text-base leading-relaxed mb-12">
-              Every project begins with listening — understanding the space, the vision, and the audience. The result is photography that doesn't just document a room, but communicates its purpose and personality.
+              Translating a three-dimensional space into a two-dimensional image isn't just about the click of a shutter — it's about capturing feeling, atmosphere, and identity.
             </p>
             <Link
               href="/contact"
