@@ -7,8 +7,7 @@ import Image from 'next/image';
 const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=768,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
   { src: BASE + 'jackson-foyer-YrDJNazJOLHVElKJ.jpeg', tall: false },
-  { src: BASE + 'lekk4112-dxo_deepprime-3-large-TXZRTuhKwbuFVhmO.jpeg', tall: true },
-  { src: BASE + '0j6a3776-mnlJBwyeLEuDyqKw.jpg', tall: false },
+  { src: BASE + '0j6a3776-mnlJBwyeLEuDyqKw.jpg', tall: true },
   { src: BASE + 'lekk5172-dxo_deepprime-3-large-rXe5eGMkw8wyYGl4.jpeg', tall: true },
   { src: BASE + 'hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg', tall: false },
   { src: BASE + 'lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', tall: true },
