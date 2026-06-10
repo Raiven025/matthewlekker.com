@@ -27,20 +27,20 @@ export default function ExteriorPage() {
 
   return (
     <div className="bg-[#0a0a0a]">
-      <section className="relative h-[50vh] flex items-end pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${photos[0].src})` }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
-        <div className="relative z-10 px-8 md:px-20 w-full">
-          <Link href="/portfolio" className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.3em] uppercase hover:text-[#c9a96e] transition-colors mb-6">
-            ← Portfolio
-          </Link>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-3">Exteriors</motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-extralight text-white tracking-tight">Architecture</motion.h1>
-        </div>
+      <section className="bg-[#0a0a0a] pt-32 pb-12 px-8 md:px-20">
+        <Link href="/portfolio" className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.3em] uppercase hover:text-[#c9a96e] transition-colors mb-10">
+          ← Portfolio
+        </Link>
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+          className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-4">Exteriors</motion.p>
+        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
+          className="text-5xl md:text-7xl font-extralight text-white tracking-tight">Architecture</motion.h1>
+        <div className="w-12 h-px bg-[#c9a96e] mt-8" />
       </section>
+
+      <div className="w-full h-[60vh] relative overflow-hidden">
+        <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
+      </div>
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
