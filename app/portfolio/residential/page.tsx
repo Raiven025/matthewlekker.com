@@ -39,7 +39,7 @@ export default function ResidentialPage() {
   return (
     <div className="bg-[#0a0a0a]">
       {/* Text header — clean, no photo behind it */}
-      <section className="bg-[#0a0a0a] pt-32 pb-12 px-8 md:px-20">
+      <section className="bg-[#0a0a0a] pt-20 pb-6 px-8 md:px-20">
         <Link href="/portfolio" className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.3em] uppercase hover:text-[#c9a96e] transition-colors mb-10">
           ← Portfolio
         </Link>
