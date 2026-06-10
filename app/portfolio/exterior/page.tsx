@@ -5,7 +5,8 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=600,fit=crop/AMqlLZQweECGbqM2/';
+const HERO = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/';
+const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
   { src: BASE + '45-0j6a6615-A85MgE71JnFrxlJo.jpg', alt: 'Contemporary residential architecture exterior — NJ architecture photography' },
   { src: BASE + 'dji_0363-enhanced-nr-AGBbN8zD90UkEEjr.jpg', alt: 'Aerial drone architecture shot — exterior photography NJ' },
@@ -38,7 +39,7 @@ export default function ExteriorPage() {
       </section>
 
       <div className="w-full h-[60vh] relative overflow-hidden">
-        <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
+        <Image src={HERO + '45-0j6a6615-A85MgE71JnFrxlJo.jpg'} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
       </div>
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">

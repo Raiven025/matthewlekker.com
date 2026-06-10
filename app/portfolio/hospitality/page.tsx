@@ -5,7 +5,8 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=700,fit=crop/AMqlLZQweECGbqM2/';
+const HERO = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/';
+const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=900,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
   { src: BASE + 'hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg', alt: 'Luxury hotel room interior photography — NJ hospitality' },
   { src: BASE + 'foyer-3-AQEezpRyNMtqZ7v1.jpeg', alt: 'Hotel foyer — hospitality photography NJ' },
@@ -37,7 +38,7 @@ export default function HospitalityPage() {
       </section>
 
       <div className="w-full h-[60vh] relative overflow-hidden">
-        <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
+        <Image src={HERO + 'hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg'} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
       </div>
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">

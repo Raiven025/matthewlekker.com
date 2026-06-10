@@ -5,7 +5,8 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=900,fit=crop/AMqlLZQweECGbqM2/';
+const HERO = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/';
+const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=1200,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
   { src: BASE + 'jackson-foyer-YrDJNazJOLHVElKJ.jpeg', alt: 'Elegant residential foyer with natural light — NJ interior photography' },
   { src: BASE + 'lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', alt: 'Open-plan living space with architectural details' },
@@ -52,7 +53,7 @@ export default function ResidentialPage() {
 
       {/* Full-bleed hero photo — no text on it */}
       <div className="w-full h-[60vh] relative overflow-hidden">
-        <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
+        <Image src={HERO + 'jackson-foyer-YrDJNazJOLHVElKJ.jpeg'} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
       </div>
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">
