@@ -8,7 +8,6 @@ import Link from 'next/link';
 const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,h=600,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
   { src: BASE + '45-0j6a6615-A85MgE71JnFrxlJo.jpg', alt: 'Contemporary residential architecture exterior — NJ architecture photography' },
-  { src: BASE + 'dji_0558-YbNJgXeaV7Szz4Q8.jpeg', alt: 'Aerial view of residential building — architectural photography NJ' },
   { src: BASE + 'dji_0363-enhanced-nr-AGBbN8zD90UkEEjr.jpg', alt: 'Aerial drone architecture shot — exterior photography NJ' },
   { src: BASE + 'dji_0455-mv0JoOPnJ5t3jJjz.jpg', alt: 'Residential exterior from above — drone architecture photography NJ' },
   { src: BASE + 'dji_0475-mp8J0EgBy8Tvl2NG.jpg', alt: 'Architectural exterior drone view — NJ photography' },
