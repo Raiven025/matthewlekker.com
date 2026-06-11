@@ -5,19 +5,44 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const HERO = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/';
-const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=900,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
-  { src: BASE + 'hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg', alt: 'Luxury hotel room interior photography — NJ hospitality' },
-  { src: BASE + 'foyer-3-AQEezpRyNMtqZ7v1.jpeg', alt: 'Hotel foyer — hospitality photography NJ' },
-  { src: BASE + 'foyer-bar-A1az6J2BkRtWbaeG.jpeg', alt: 'Hotel bar and foyer — NJ hospitality interior photography' },
-  { src: BASE + 'foyer-check-in-24-dOqZw4o3GyigNEeR.jpg', alt: 'Hotel check-in desk — hospitality photography New Jersey' },
-  { src: BASE + 'red-room-m7VDNKnvvOseg1yY.jpeg', alt: 'Luxury hotel room with red accents — NJ hospitality photography' },
-  { src: BASE + 'wellness-room-1-YX4jOb6nbotwnw1Q.jpeg', alt: 'Hotel wellness room — NJ hospitality interior photography' },
-  { src: BASE + 'wellness-room-A3QlxJzjbyIZ07oj.jpeg', alt: 'Hotel spa and wellness — hospitality photography NJ' },
-  { src: BASE + 'lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg', alt: 'Hotel lobby with warm ambient lighting — NJ hospitality photography' },
-  { src: BASE + '0j6a9894-YleQZR60rLUvLLWP.jpg', alt: 'Restaurant and venue interior — hospitality photography NJ' },
-  { src: BASE + 'lekk5195-dxo_deepprime-3-large-ZoKOF06HJCCN3BA0.jpeg', alt: 'Event venue interior — hospitality photography New Jersey' },
+  { src: '/images/Hospitality/LEKK0009-DxO_DeepPRIME-3.jpeg', alt: 'Luxury hotel interior photography — NJ hospitality' },
+  { src: '/images/Hospitality/LEKK0040-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior — hospitality photography NJ' },
+  { src: '/images/Hospitality/LEKK0118-DxO_DeepPRIME-3.jpeg', alt: 'Hotel room — NJ hospitality interior photography' },
+  { src: '/images/Hospitality/LEKK0152-DxO_DeepPRIME-3.jpeg', alt: 'Hospitality interior — NJ photography' },
+  { src: '/images/Hospitality/LEKK0223-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior design — NJ hospitality photography' },
+  { src: '/images/Hospitality/LEKK0286-DxO_DeepPRIME-3-2.jpeg', alt: 'Luxury hotel space — hospitality photography NJ' },
+  { src: '/images/Hospitality/LEKK0740-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior — NJ hospitality photography' },
+  { src: '/images/Hospitality/LEKK0752-DxO_DeepPRIME-3.jpeg', alt: 'Hospitality interior photography — NJ' },
+  { src: '/images/Hospitality/LEKK0760-DxO_DeepPRIME-3.jpeg', alt: 'Hotel room photography — NJ hospitality' },
+  { src: '/images/Hospitality/LEKK0779-DxO_DeepPRIME-3.jpeg', alt: 'Luxury hotel interior — NJ photography' },
+  { src: '/images/Hospitality/LEKK0783-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior design — hospitality photography NJ' },
+  { src: '/images/Hospitality/LEKK0797-DxO_DeepPRIME-3.jpeg', alt: 'Hospitality photography — NJ hotel interior' },
+  { src: '/images/Hospitality/LEKK1060-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior — NJ hospitality photography' },
+  { src: '/images/Hospitality/LEKK1080-DxO_DeepPRIME-3.jpeg', alt: 'Luxury hotel room — NJ hospitality photography' },
+  { src: '/images/Hospitality/LEKK1302-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior photography — NJ' },
+  { src: '/images/Hospitality/LEKK1522-DxO_DeepPRIME-3-1.jpeg', alt: 'Hospitality interior — NJ photography' },
+  { src: '/images/Hospitality/LEKK1650-DxO_DeepPRIME-3.jpeg', alt: 'Hotel design — NJ hospitality photography' },
+  { src: '/images/Hospitality/LEKK1834-DxO_DeepPRIME-3.jpeg', alt: 'Luxury hotel interior — NJ photography' },
+  { src: '/images/Hospitality/LEKK1842-DxO_DeepPRIME-3.jpeg', alt: 'Hotel room photography — NJ hospitality' },
+  { src: '/images/Hospitality/LEKK2150-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior — hospitality photography NJ' },
+  { src: '/images/Hospitality/LEKK2238-DxO_DeepPRIME-3.jpeg', alt: 'Hospitality interior photography — NJ' },
+  { src: '/images/Hospitality/LEKK2250-DxO_DeepPRIME-3.jpeg', alt: 'Hotel room — NJ hospitality photography' },
+  { src: '/images/Hospitality/LEKK2254-DxO_DeepPRIME-3.jpeg', alt: 'Luxury hotel interior — hospitality photography NJ' },
+  { src: '/images/Hospitality/LEKK2258-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior design — NJ photography' },
+  { src: '/images/Hospitality/LEKK2270-DxO_DeepPRIME-3.jpeg', alt: 'Hospitality photography — NJ hotel' },
+  { src: '/images/Hospitality/LEKK2342-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior — NJ hospitality photography' },
+  { src: '/images/Hospitality/LEKK2350-DxO_DeepPRIME-3.jpeg', alt: 'Luxury hotel room — NJ photography' },
+  { src: '/images/Hospitality/LEKK2354-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior photography — NJ hospitality' },
+  { src: '/images/Hospitality/LEKK3201-DxO_DeepPRIME-3.jpeg', alt: 'Hospitality interior — NJ photography' },
+  { src: '/images/Hospitality/LEKK3405-DxO_DeepPRIME-3.jpeg', alt: 'Hotel design photography — NJ' },
+  { src: '/images/Hospitality/LEKK3703-DxO_DeepPRIME-3.jpeg', alt: 'Luxury hotel interior — NJ hospitality photography' },
+  { src: '/images/Hospitality/LEKK3753-DxO_DeepPRIME-3.jpeg', alt: 'Hotel interior — hospitality photography NJ' },
+  { src: '/images/Hospitality/LEKK3932-DxO_DeepPRIME-3.jpeg', alt: 'Hospitality photography — NJ hotel interior' },
+  { src: '/images/Hospitality/Amarula-Stop.jpg', alt: 'Amarula Stop hospitality photography' },
+  { src: '/images/Hospitality/Cairo-Marriott.jpeg', alt: 'Cairo Marriott hotel interior photography' },
+  { src: '/images/Hospitality/Steigenberger-Nile-Palace-Foyer.jpg', alt: 'Steigenberger Nile Palace foyer — hospitality photography' },
+  { src: '/images/Hospitality/W-hotel-Ft.-Lauderdale.jpeg', alt: 'W Hotel Fort Lauderdale — hospitality photography' },
 ];
 
 export default function HospitalityPage() {
@@ -38,7 +63,7 @@ export default function HospitalityPage() {
       </section>
 
       <div className="w-full h-[60vh] relative overflow-hidden">
-        <Image src={HERO + 'hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg'} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
+        <Image src="/images/Hospitality/LEKK0009-DxO_DeepPRIME-3.jpeg" alt="Luxury hotel interior — NJ hospitality photography" fill className="object-cover" priority sizes="100vw" />
       </div>
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">
@@ -47,7 +72,7 @@ export default function HospitalityPage() {
             <motion.div key={i}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.05 }}
               className="relative overflow-hidden group"
               style={{ height: '420px' }}
             >

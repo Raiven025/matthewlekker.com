@@ -5,20 +5,18 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const HERO = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/';
-const BASE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/';
 const photos = [
-  { src: BASE + '45-0j6a6615-A85MgE71JnFrxlJo.jpg', alt: 'Contemporary residential architecture exterior — NJ architecture photography' },
-  { src: BASE + 'dji_0363-enhanced-nr-AGBbN8zD90UkEEjr.jpg', alt: 'Aerial drone architecture shot — exterior photography NJ' },
-  { src: BASE + 'dji_0455-mv0JoOPnJ5t3jJjz.jpg', alt: 'Residential exterior from above — drone architecture photography NJ' },
-  { src: BASE + 'dji_0475-mp8J0EgBy8Tvl2NG.jpg', alt: 'Architectural exterior drone view — NJ photography' },
-  { src: BASE + 'dji_0519-enhanced-nr-YNq281MWRoTQjvRk.jpg', alt: 'Exterior architecture with dramatic sky — NJ aerial photography' },
-  { src: BASE + '0j6a0773-mjEGWln3EetQbObv.jpg', alt: 'Residential exterior facade — NJ architectural photography' },
-  { src: BASE + '0j6a9727-YKbl9ZQEn1TBkz6E.jpg', alt: 'Modern architecture exterior — New Jersey photography' },
-  { src: BASE + 'macdonald-18-YKbl9Z4LP8HjpGGD.jpg', alt: 'MacDonald residence exterior — NJ architecture photography' },
-  { src: BASE + 'macdonald-24-mnlJBDwpE2hEMvo8.jpg', alt: 'MacDonald property — architectural exterior photography NJ' },
-  { src: BASE + 'macdonald-3-YZ9j4qGLB5TKEe6V.jpg', alt: 'MacDonald residence — exterior architecture photography' },
-  { src: BASE + 'macdonald-4-AMq8Pe91a7uqpjx2.jpg', alt: 'MacDonald residence exterior detail — NJ architecture' },
+  { src: '/images/Architecture/0J6A0307-Enhanced-NR.jpeg', alt: 'Contemporary residential architecture exterior — NJ architecture photography' },
+  { src: '/images/Architecture/0J6A6651...CROP.jpeg', alt: 'Architectural exterior — NJ photography' },
+  { src: '/images/Architecture/8.jpg', alt: 'Residential exterior — NJ architectural photography' },
+  { src: '/images/Architecture/DJI_0432.jpeg', alt: 'Aerial drone architecture shot — exterior photography NJ' },
+  { src: '/images/Architecture/DJI_0447.jpeg', alt: 'Residential exterior from above — drone architecture photography NJ' },
+  { src: '/images/Architecture/DJI_0486.jpeg', alt: 'Architectural exterior drone view — NJ photography' },
+  { src: '/images/Architecture/DJI_0558.jpeg', alt: 'Exterior architecture aerial — NJ drone photography' },
+  { src: '/images/Architecture/DJI_0594.jpeg', alt: 'Exterior architecture with dramatic sky — NJ aerial photography' },
+  { src: '/images/Architecture/DJI_0597-1.jpeg', alt: 'Architectural exterior drone shot — NJ photography' },
+  { src: '/images/Drone/DJI_20241203163003_0328_D-Edit.jpg', alt: 'Drone aerial architecture — NJ photography' },
+  { src: '/images/Landscape/Blue-Morning-Light.jpg', alt: 'Blue morning light landscape — NJ photography' },
 ];
 
 export default function ExteriorPage() {
@@ -39,7 +37,7 @@ export default function ExteriorPage() {
       </section>
 
       <div className="w-full h-[60vh] relative overflow-hidden">
-        <Image src={HERO + '45-0j6a6615-A85MgE71JnFrxlJo.jpg'} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
+        <Image src="/images/Architecture/0J6A0307-Enhanced-NR.jpeg" alt="Contemporary residential architecture exterior — NJ" fill className="object-cover" priority sizes="100vw" />
       </div>
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">
