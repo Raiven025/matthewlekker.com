@@ -15,8 +15,6 @@ const photos = [
   { src: '/images/Architecture/DJI_0558.jpeg', alt: 'Exterior architecture aerial — NJ drone photography' },
   { src: '/images/Architecture/DJI_0594.jpeg', alt: 'Exterior architecture with dramatic sky — NJ aerial photography' },
   { src: '/images/Architecture/DJI_0597-1.jpeg', alt: 'Architectural exterior drone shot — NJ photography' },
-  { src: '/images/Drone/DJI_20241203163003_0328_D-Edit.jpg', alt: 'Drone aerial architecture — NJ photography' },
-  { src: '/images/Landscape/Blue-Morning-Light.jpg', alt: 'Blue morning light landscape — NJ photography' },
 ];
 
 export default function ExteriorPage() {
