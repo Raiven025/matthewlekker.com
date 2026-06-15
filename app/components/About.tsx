@@ -29,8 +29,6 @@ function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
 const stats = [
   { display: <CountUp to={10} suffix="+" />, label: 'Years Experience' },
   { display: <CountUp to={500} suffix="+" />, label: 'Spaces Photographed' },
-  { display: <CountUp to={48} suffix="hr" />, label: 'Image Delivery' },
-  { display: <CountUp to={3} suffix="+" />, label: 'NJ · NY · CT' },
 ];
 
 export default function About() {
@@ -44,7 +42,7 @@ export default function About() {
       <div className="max-w-5xl mx-auto">
 
         {/* Stats row — top */}
-        <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-24 pb-24 border-b border-white/8">
+        <div ref={statsRef} className="grid grid-cols-2 gap-6 md:gap-8 mb-24 pb-24 border-b border-white/8 max-w-2xl mx-auto">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -78,7 +76,7 @@ export default function About() {
           </h2>
           <div className="w-12 h-px bg-[#c9a96e] mx-auto mb-8" />
           <p className="text-white/50 text-base leading-relaxed mb-5">
-            I'm Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography — working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
+            I&apos;m Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography — working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
           </p>
           <p className="text-white/50 text-base leading-relaxed mb-12">
             Clients come to me for my calm creative direction, editorial eye, and the ability to make spaces feel as good as they look — rooted in natural light, thoughtful composition, and a deep respect for the craft of design.

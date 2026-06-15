@@ -8,8 +8,6 @@ import Link from 'next/link';
 const stats = [
   { number: '10+', label: 'Years in Architectural Photography' },
   { number: '500+', label: 'Spaces Photographed' },
-  { number: '48hr', label: 'Edited Image Delivery' },
-  { number: '3+', label: 'NJ · NY · CT Coverage' },
 ];
 
 const services = [
@@ -107,13 +105,13 @@ export default function AboutPage() {
             </h2>
             <div className="w-16 h-px bg-[#c9a96e] mb-8" />
             <p className="text-white/55 text-base leading-relaxed mb-6">
-              I'm Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography — working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
+              I&apos;m Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography — working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
             </p>
             <p className="text-white/55 text-base leading-relaxed mb-6">
-              Clients come to me for my calm creative direction, editorial eye, and the ability to make spaces feel as good as they look. With years of hands-on experience, I've built a signature style rooted in natural light, thoughtful composition, and a deep respect for the craft of design.
+              Clients come to me for my calm creative direction, editorial eye, and the ability to make spaces feel as good as they look. With years of hands-on experience, I&apos;ve built a signature style rooted in natural light, thoughtful composition, and a deep respect for the craft of design.
             </p>
             <p className="text-white/55 text-base leading-relaxed mb-12">
-              Translating a three-dimensional space into a two-dimensional image isn't just about the click of a shutter — it's about capturing feeling, atmosphere, and identity.
+              Translating a three-dimensional space into a two-dimensional image isn&apos;t just about the click of a shutter — it&apos;s about capturing feeling, atmosphere, and identity.
             </p>
             <Link
               href="/contact"
@@ -128,7 +126,7 @@ export default function AboutPage() {
 
       {/* Stats */}
       <section ref={statsRef} className="bg-[#111111] py-24 px-8 md:px-20">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="max-w-2xl mx-auto grid grid-cols-2 gap-10">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -208,7 +206,7 @@ export default function AboutPage() {
       <section className="py-28 px-8 md:px-20 text-center">
         <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-5">Ready?</p>
         <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-10">
-          Let's create something<br />
+          Let&apos;s create something<br />
           <span className="text-[#c9a96e]">extraordinary.</span>
         </h2>
         <Link
