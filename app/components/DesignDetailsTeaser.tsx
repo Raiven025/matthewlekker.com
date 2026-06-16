@@ -20,7 +20,7 @@ export default function DesignDetailsTeaser() {
         {/* Image */}
         <Link href="/design-details" className="block relative h-[440px] md:h-[580px] overflow-hidden group">
           <Image
-            src="/images/Interiors/LEKK0110.jpg"
+            src="/images/Interiors/0J6A0188-Edit.jpg"
             alt="Design Details & Product Photography"
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"

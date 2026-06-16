@@ -43,7 +43,7 @@ const categories = [
     title: 'Design Details & Product',
     subtitle: 'Objects & Craftsmanship',
     description: 'The art of the close-up — curated product and design detail photography that celebrates craftsmanship.',
-    image: '/images/Interiors/LEKK0110.jpg',
+    image: '/images/Interiors/0J6A0188-Edit.jpg',
     href: '/design-details',
   },
 ];
