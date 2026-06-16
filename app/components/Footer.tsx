@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -16,12 +17,10 @@ export default function Footer() {
 
         {/* Brand   centered on all sizes */}
         <div className="flex flex-col items-center text-center gap-3 mb-12">
-          <div className="w-10 h-10 border border-[#C8825A] flex items-center justify-center">
-            <span className="text-[#C8825A] font-bold text-sm tracking-wider">ML</span>
-          </div>
+          <Image src="/ml-logo.png" alt="Matthew Lekker Photography" width={48} height={40} className="h-10 w-auto object-contain" />
           <div>
             <p className="text-[#F0EDE8] text-sm font-light tracking-[0.2em] uppercase leading-tight">Matthew Lekker</p>
-            <p className="text-[#C8825A] text-[10px] tracking-[0.35em] uppercase mt-1">Photography · NJ</p>
+            <p className="text-[#C8825A] text-[10px] tracking-[0.35em] uppercase mt-1">Photography · Worldwide</p>
           </div>
         </div>
 
@@ -67,7 +66,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Matthew Lekker Photography. All rights reserved.
           </p>
           <p className="text-white/10 text-xs tracking-[0.25em] uppercase">
-            New Jersey · Architecture · Interiors · Hospitality
+            Architecture · Interiors · Hospitality · Worldwide
           </p>
         </div>
 
