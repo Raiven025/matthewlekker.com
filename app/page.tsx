@@ -21,7 +21,7 @@ const jsonLd = {
       "name": "Matthew Lekker Photography",
       "description": "Architectural and interior photography based in New Jersey, serving architects, designers, developers, and hospitality brands across the Tri-State Area.",
       "url": "https://matthewlekker.com",
-      "email": "info@matthewlekker.com",
+      "email": "matthew@matthewlekker.com",
       "image": "https://matthewlekker.com/og-image.jpg",
       "areaServed": [
         { "@type": "State", "name": "New Jersey" },
