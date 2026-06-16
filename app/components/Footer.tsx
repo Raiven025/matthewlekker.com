@@ -14,7 +14,7 @@ export default function Footer() {
     <footer className="bg-[#0a0a0a] border-t border-[#c9a96e]/15">
       <div className="max-w-6xl mx-auto px-8 md:px-16 py-14">
 
-        {/* Brand — centered on all sizes */}
+        {/* Brand   centered on all sizes */}
         <div className="flex flex-col items-center text-center gap-3 mb-12">
           <div className="w-10 h-10 border border-[#c9a96e] flex items-center justify-center">
             <span className="text-[#c9a96e] font-bold text-sm tracking-wider">ML</span>
@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Nav — centered */}
+        {/* Nav   centered */}
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">
           {navLinks.map((link) => (
             <Link
@@ -38,7 +38,7 @@ export default function Footer() {
           ))}
         </nav>
 
-        {/* Contact — centered */}
+        {/* Contact   centered */}
         <div className="flex flex-col items-center gap-3 mb-12">
           <a
             href="mailto:info@matthewlekker.com"

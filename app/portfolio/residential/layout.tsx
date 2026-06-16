@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Residential Interior Photography NJ | Matthew Lekker",
-  description: "Residential interior photography in New Jersey — kitchens, living rooms, bedrooms, and entryways photographed for architects, designers, and real estate developers.",
+  description: "Residential interior photography in New Jersey   kitchens, living rooms, bedrooms, and entryways photographed for architects, designers, and real estate developers.",
   alternates: {
     canonical: "https://matthewlekker.com/portfolio/residential",
   },

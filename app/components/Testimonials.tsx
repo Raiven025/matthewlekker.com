@@ -13,14 +13,14 @@ const testimonials = [
     photo: "/testimonials/arianne.jpg",
   },
   {
-    quote: "I can't say enough about Matt and the team at Lekker. My real estate photos for clients are always amazing. Matt has also worked with me personally on passion projects and events. His attention to detail and ability to guide the process is unmatched. In a word — obsessed.",
+    quote: "I can't say enough about Matt and the team at Lekker. My real estate photos for clients are always amazing. Matt has also worked with me personally on passion projects and events. His attention to detail and ability to guide the process is unmatched. In a word   obsessed.",
     name: "Nicole Romanik",
     role: "Local Guide · Real Estate",
     initials: "NR",
     photo: "/testimonials/nicole-romanik.jpg",
   },
   {
-    quote: "Matt was the most professional and amazing photographer I've ever worked with. He made our house look incredible and was so warm and easy to work with. He was responsive through text, phone, and email. You won't be sorry — Matt and his company are wonderful.",
+    quote: "Matt was the most professional and amazing photographer I've ever worked with. He made our house look incredible and was so warm and easy to work with. He was responsive through text, phone, and email. You won't be sorry   Matt and his company are wonderful.",
     name: "Margaret Geib",
     role: "Residential Photography",
     initials: "MG",
@@ -138,7 +138,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Cards 4 & 5 — animate in on scroll */}
+        {/* Cards 4 & 5   animate in on scroll */}
         <div ref={bottomRef} className="grid md:grid-cols-2 gap-5 md:px-[16.67%]">
           {testimonials.slice(3).map((t, i) => (
             <Card key={i} t={t} delay={i * 0.15} inView={bottomInView} />

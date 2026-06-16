@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Commercial Space Photography NJ | Matthew Lekker",
-  description: "Commercial interior photography in New Jersey — offices, showrooms, retail spaces, and professional environments. Photography that communicates your brand to clients and tenants.",
+  description: "Commercial interior photography in New Jersey   offices, showrooms, retail spaces, and professional environments. Photography that communicates your brand to clients and tenants.",
   alternates: {
     canonical: "https://matthewlekker.com/portfolio/commercial",
   },

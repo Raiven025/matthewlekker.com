@@ -38,7 +38,7 @@ export default function BlogPage() {
               Stories from behind the lens
             </h2>
             <p className="text-white/40 text-sm leading-relaxed mb-10">
-              Matthew's journal — featuring shoot breakdowns, design insights, and the stories behind the spaces. Check back soon.
+              Matthew's journal   featuring shoot breakdowns, design insights, and the stories behind the spaces. Check back soon.
             </p>
             <Link
               href="/"

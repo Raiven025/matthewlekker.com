@@ -6,12 +6,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const photos = [
-  { src: '/images/Commercial/0J6A1097-Enhanced-NR-2.jpeg', alt: 'Commercial interior photography — NJ professional' },
-  { src: '/images/Commercial/0J6A6566.jpeg', alt: 'Commercial space interior — NJ photography' },
-  { src: '/images/Commercial/0J6A6597.jpeg', alt: 'Commercial interior — NJ professional photography' },
-  { src: '/images/Commercial/Foyer-Check-in-24.jpg', alt: 'Hotel check-in desk — commercial interior photography NJ' },
-  { src: '/images/Commercial/Red-Room.jpeg', alt: 'Commercial interior with red accents — NJ photography' },
-  { src: '/images/Commercial/Wellness-Room-1.jpeg', alt: 'Wellness room interior — commercial photography NJ' },
+  { src: '/images/Commercial/0J6A1097-Enhanced-NR-2.jpeg', alt: 'Commercial interior photography   NJ professional' },
+  { src: '/images/Commercial/0J6A6566.jpeg', alt: 'Commercial space interior   NJ photography' },
+  { src: '/images/Commercial/0J6A6597.jpeg', alt: 'Commercial interior   NJ professional photography' },
+  { src: '/images/Commercial/Foyer-Check-in-24.jpg', alt: 'Hotel check-in desk   commercial interior photography NJ' },
+  { src: '/images/Commercial/Red-Room.jpeg', alt: 'Commercial interior with red accents   NJ photography' },
+  { src: '/images/Commercial/Wellness-Room-1.jpeg', alt: 'Wellness room interior   commercial photography NJ' },
 ];
 
 export default function CommercialPage() {
@@ -32,7 +32,7 @@ export default function CommercialPage() {
       </section>
 
       <div className="w-full h-[60vh] relative overflow-hidden">
-        <Image src="/images/Commercial/0J6A1097-Enhanced-NR-2.jpeg" alt="Commercial interior photography — NJ" fill className="object-cover" priority sizes="100vw" />
+        <Image src="/images/Commercial/0J6A1097-Enhanced-NR-2.jpeg" alt="Commercial interior photography   NJ" fill className="object-cover" priority sizes="100vw" />
       </div>
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">

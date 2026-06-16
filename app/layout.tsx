@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Matthew Lekker Photography | Architectural & Interior Photography NJ",
-    description: "Framing spaces with soul — architectural & interior photography serving NJ, NY, and CT.",
+    description: "Framing spaces with soul   architectural & interior photography serving NJ, NY, and CT.",
     url: "https://matthewlekker.com",
     siteName: "Matthew Lekker Photography",
     type: "website",
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
         url: "https://matthewlekker.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Matthew Lekker Photography — Architectural & Interior Photography NJ",
+        alt: "Matthew Lekker Photography   Architectural & Interior Photography NJ",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Matthew Lekker Photography",
-    description: "Framing spaces with soul — architectural & interior photography in NJ.",
+    description: "Framing spaces with soul   architectural & interior photography in NJ.",
     images: ["https://matthewlekker.com/og-image.jpg"],
   },
 };
@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`h-full antialiased ${raleway.variable} ${inter.variable}`}>
       <head>
-        {/* Preload hero image — it is the LCP element on the homepage */}
+        {/* Preload hero image   it is the LCP element on the homepage */}
         <link
           rel="preload"
           as="image"

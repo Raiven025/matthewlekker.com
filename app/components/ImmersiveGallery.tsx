@@ -25,11 +25,11 @@ const photos = [
 ];
 
 export default function ImmersiveGallery() {
-  // Outer tall container — provides the vertical scroll distance
+  // Outer tall container   provides the vertical scroll distance
   const containerRef = useRef<HTMLDivElement>(null);
-  // Sticky inner — pins to viewport while container scrolls past
+  // Sticky inner   pins to viewport while container scrolls past
   const stickyRef = useRef<HTMLDivElement>(null);
-  // The image strip — we measure its full width
+  // The image strip   we measure its full width
   const trackRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef(null);
 
@@ -71,9 +71,9 @@ export default function ImmersiveGallery() {
   );
 
   return (
-    // Tall wrapper — 300vh gives plenty of scroll room on all devices
+    // Tall wrapper   300vh gives plenty of scroll room on all devices
     <div ref={containerRef} style={{ height: '300vh' }}>
-      {/* Sticky panel — locks to viewport during container scroll */}
+      {/* Sticky panel   locks to viewport during container scroll */}
       <div
         ref={stickyRef}
         className="sticky top-0 h-screen bg-[#111111] overflow-hidden flex flex-col justify-center"
