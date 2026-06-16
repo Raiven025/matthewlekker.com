@@ -22,7 +22,7 @@ export default function DesignDetailsPage() {
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
           className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-4">Objects & Craftsmanship</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-extralight text-[#F0EDE8] tracking-tight">Design Details<br /><span className="text-[#C8825A]">&amp; Product</span></motion.h1>
+          className="text-5xl md:text-7xl font-extralight text-[#F0EDE8] tracking-tight">Design Details <span className="text-[#C8825A]">&amp; Product</span></motion.h1>
         <div className="w-12 h-px bg-[#C8825A] mt-8" />
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}
           className="text-[#888880] text-base leading-relaxed mt-6 max-w-xl">
