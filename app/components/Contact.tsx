@@ -20,7 +20,7 @@ export default function Contact() {
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #C47B4A 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 1px 1px, #C8825A 1px, transparent 0)',
           backgroundSize: '40px 40px',
         }}
       />
@@ -31,7 +31,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-8"
+          className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-8"
         >
           Let's Work Together
         </motion.p>
@@ -44,14 +44,14 @@ export default function Contact() {
         >
           Ready to elevate
           <br />
-          <span className="text-[#C47B4A]">your space?</span>
+          <span className="text-[#C8825A]">your space?</span>
         </motion.h2>
 
         <motion.div
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-20 h-px bg-[#C47B4A] mb-10"
+          className="w-20 h-px bg-[#C8825A] mb-10"
         />
 
         <motion.p
@@ -77,7 +77,7 @@ export default function Contact() {
           </Link>
           <a
             href="mailto:info@matthewlekker.com"
-            className="border border-white/20 text-white/60 text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#C47B4A] hover:text-[#C47B4A] transition-all duration-300"
+            className="border border-white/20 text-[#888880] text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#C8825A] hover:text-[#C8825A] transition-all duration-300"
           >
             Send an Email
           </a>

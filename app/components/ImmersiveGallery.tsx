@@ -87,10 +87,10 @@ export default function ImmersiveGallery() {
             className="flex items-end justify-between"
           >
             <div>
-              <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-3">Gallery</p>
+              <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-3">Gallery</p>
               <h2 className="text-4xl md:text-5xl font-light text-[#F0EDE8] tracking-tight">The Work</h2>
             </div>
-            <p className="text-white/30 text-xs tracking-[0.3em] uppercase hidden md:block">
+            <p className="text-[#888880]/60 text-xs tracking-[0.3em] uppercase hidden md:block">
               Scroll to explore →
             </p>
           </motion.div>
@@ -132,7 +132,7 @@ export default function ImmersiveGallery() {
         </div>
 
         {/* Mobile hint */}
-        <p className="text-white/20 text-[10px] tracking-[0.3em] uppercase text-center mt-8 md:hidden flex-shrink-0">
+        <p className="text-[#F0EDE8]/20 text-[10px] tracking-[0.3em] uppercase text-center mt-8 md:hidden flex-shrink-0">
           Scroll to explore
         </p>
       </div>

@@ -65,16 +65,16 @@ function CategoryBlock({ cat, index }: { cat: typeof categories[0]; index: numbe
 
       {/* Text */}
       <div className={`bg-[#111111] px-14 md:px-20 py-16 md:py-20 flex flex-col justify-center ${isEven ? '' : '[direction:ltr]'}`}>
-        <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-4">{cat.subtitle}</p>
+        <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-4">{cat.subtitle}</p>
         <h2 className="text-4xl md:text-5xl font-extralight text-[#F0EDE8] tracking-tight mb-5">{cat.title}</h2>
-        <div className="w-12 h-px bg-[#C47B4A] mb-7" />
+        <div className="w-12 h-px bg-[#C8825A] mb-7" />
         <p className="text-white/45 text-base leading-relaxed mb-10">{cat.description}</p>
         <Link
           href={cat.href}
-          className="inline-flex items-center gap-3 text-[#C47B4A] text-xs tracking-[0.3em] uppercase hover:gap-6 transition-all duration-300 group"
+          className="inline-flex items-center gap-3 text-[#C8825A] text-xs tracking-[0.3em] uppercase hover:gap-6 transition-all duration-300 group"
         >
           View Work
-          <div className="w-8 h-px bg-[#C47B4A] group-hover:w-12 transition-all duration-300" />
+          <div className="w-8 h-px bg-[#C8825A] group-hover:w-12 transition-all duration-300" />
         </Link>
       </div>
     </motion.div>
@@ -95,7 +95,7 @@ export default function PortfolioPage() {
         <div className="relative z-10 px-8 md:px-20 w-full">
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-4"
+            className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-4"
           >Selected Work</motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
@@ -113,7 +113,7 @@ export default function PortfolioPage() {
 
       {/* CTA */}
       <section className="py-28 px-8 md:px-20 text-center bg-[#111111]">
-        <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-5">Let's Work Together</p>
+        <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-5">Let's Work Together</p>
         <h2 className="text-4xl md:text-5xl font-extralight text-[#F0EDE8] tracking-tight mb-10">
           Have a project in mind?
         </h2>

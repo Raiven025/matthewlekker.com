@@ -17,7 +17,7 @@ export default function BlogPage() {
           <div className="relative z-10 px-8 md:px-12 max-w-7xl mx-auto w-full">
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-3"
+              className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-3"
             >Insights & Stories</motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
@@ -32,17 +32,17 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
             className="text-center max-w-md"
           >
-            <div className="w-16 h-px bg-[#C47B4A] mx-auto mb-8" />
-            <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-4">Coming Soon</p>
+            <div className="w-16 h-px bg-[#C8825A] mx-auto mb-8" />
+            <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-4">Coming Soon</p>
             <h2 className="text-3xl font-extralight text-[#F0EDE8] tracking-tight mb-6">
               Stories from behind the lens
             </h2>
-            <p className="text-white/40 text-sm leading-relaxed mb-10">
+            <p className="text-[#888880] text-sm leading-relaxed mb-10">
               Matthew's journal   featuring shoot breakdowns, design insights, and the stories behind the spaces. Check back soon.
             </p>
             <Link
               href="/"
-              className="inline-flex items-center gap-3 text-white/50 text-xs tracking-[0.3em] uppercase hover:text-[#C47B4A] transition-colors"
+              className="inline-flex items-center gap-3 text-[#888880] text-xs tracking-[0.3em] uppercase hover:text-[#C8825A] transition-colors"
             >
               ← Back to Home
             </Link>

@@ -84,14 +84,14 @@ export default function ResidentialPage() {
   return (
     <div className="bg-[#0D0D0D]">
       <section className="bg-[#0D0D0D] pt-20 pb-6 px-8 md:px-20">
-        <Link href="/portfolio" className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.3em] uppercase hover:text-[#C47B4A] transition-colors mb-10">
+        <Link href="/portfolio" className="inline-flex items-center gap-2 text-[#888880]/60 text-xs tracking-[0.3em] uppercase hover:text-[#C8825A] transition-colors mb-10">
           ← Portfolio
         </Link>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-          className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-4">Interiors</motion.p>
+          className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-4">Interiors</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
           className="text-5xl md:text-7xl font-extralight text-[#F0EDE8] tracking-tight">Residential</motion.h1>
-        <div className="w-12 h-px bg-[#C47B4A] mt-8" />
+        <div className="w-12 h-px bg-[#C8825A] mt-8" />
       </section>
 
       <div className="w-full h-[60vh] relative overflow-hidden">

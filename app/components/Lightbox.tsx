@@ -40,20 +40,20 @@ export default function Lightbox({ photos, index, onClose, onNext, onPrev }: Lig
       {/* Close */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors z-10 text-xs tracking-[0.3em] uppercase"
+        className="absolute top-6 right-6 text-[#888880] hover:text-white transition-colors z-10 text-xs tracking-[0.3em] uppercase"
       >
         Close ✕
       </button>
 
       {/* Counter */}
-      <div className="absolute top-6 left-6 text-white/30 text-xs tracking-[0.3em] uppercase">
+      <div className="absolute top-6 left-6 text-[#888880]/60 text-xs tracking-[0.3em] uppercase">
         {index + 1} / {photos.length}
       </div>
 
       {/* Prev */}
       <button
         onClick={e => { e.stopPropagation(); onPrev(); }}
-        className="absolute left-4 md:left-8 text-white/40 hover:text-white transition-colors z-10 p-4"
+        className="absolute left-4 md:left-8 text-[#888880] hover:text-white transition-colors z-10 p-4"
         disabled={index === 0}
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,7 +87,7 @@ export default function Lightbox({ photos, index, onClose, onNext, onPrev }: Lig
       {/* Next */}
       <button
         onClick={e => { e.stopPropagation(); onNext(); }}
-        className="absolute right-4 md:right-8 text-white/40 hover:text-white transition-colors z-10 p-4"
+        className="absolute right-4 md:right-8 text-[#888880] hover:text-white transition-colors z-10 p-4"
         disabled={index === photos.length - 1}
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ export default function Lightbox({ photos, index, onClose, onNext, onPrev }: Lig
           <button
             key={i}
             onClick={e => { e.stopPropagation(); }}
-            className={`w-1 h-1 rounded-full transition-all duration-300 ${i === index ? 'bg-[#C47B4A] w-4' : 'bg-white/20'}`}
+            className={`w-1 h-1 rounded-full transition-all duration-300 ${i === index ? 'bg-[#C8825A] w-4' : 'bg-white/20'}`}
           />
         ))}
       </div>
