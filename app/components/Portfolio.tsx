@@ -73,19 +73,19 @@ function CategoryCard({ cat, index }: { cat: typeof categories[0]; index: number
 
         {/* Text content */}
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
-          <p className="text-[#B8978A] text-xs tracking-[0.35em] uppercase mb-3">{cat.subtitle}</p>
+          <p className="text-[#C47B4A] text-xs tracking-[0.35em] uppercase mb-3">{cat.subtitle}</p>
           <h3 className="text-white text-2xl md:text-3xl font-light tracking-wide mb-3">{cat.title}</h3>
           <p className="text-white/55 text-sm leading-relaxed overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[5rem]">
             {cat.description}
           </p>
           <div className="flex items-center gap-3 mt-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-[#B8978A] text-xs tracking-[0.3em] uppercase">View Work</span>
-            <div className="w-8 h-px bg-[#B8978A]" />
+            <span className="text-[#C47B4A] text-xs tracking-[0.3em] uppercase">View Work</span>
+            <div className="w-8 h-px bg-[#C47B4A]" />
           </div>
         </div>
 
         {/* Gold border on hover */}
-        <div className="absolute inset-0 border border-[#B8978A]/0 group-hover:border-[#B8978A]/25 transition-all duration-500" />
+        <div className="absolute inset-0 border border-[#C47B4A]/0 group-hover:border-[#C47B4A]/25 transition-all duration-500" />
       </Link>
     </motion.div>
   );
@@ -96,7 +96,7 @@ export default function Portfolio() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="bg-[#171212] py-28 px-8 md:px-20">
+    <section className="bg-[#0D0D0D] py-28 px-8 md:px-20">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -106,8 +106,8 @@ export default function Portfolio() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-3">Selected Work</p>
-            <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
+            <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-3">Selected Work</p>
+            <h2 className="text-4xl md:text-5xl font-extralight text-[#F0EDE8] tracking-tight">
               The Portfolio
             </h2>
           </motion.div>
@@ -118,7 +118,7 @@ export default function Portfolio() {
           >
             <Link
               href="/portfolio"
-              className="text-white/40 text-xs tracking-[0.3em] uppercase hover:text-[#B8978A] transition-colors duration-300 flex items-center gap-3"
+              className="text-white/40 text-xs tracking-[0.3em] uppercase hover:text-[#C47B4A] transition-colors duration-300 flex items-center gap-3"
             >
               View All Work
               <div className="w-8 h-px bg-current" />

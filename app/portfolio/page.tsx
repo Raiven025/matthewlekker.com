@@ -64,17 +64,17 @@ function CategoryBlock({ cat, index }: { cat: typeof categories[0]; index: numbe
       </Link>
 
       {/* Text */}
-      <div className={`bg-[#1e1916] px-14 md:px-20 py-16 md:py-20 flex flex-col justify-center ${isEven ? '' : '[direction:ltr]'}`}>
-        <p className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-4">{cat.subtitle}</p>
-        <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-5">{cat.title}</h2>
-        <div className="w-12 h-px bg-[#B8978A] mb-7" />
+      <div className={`bg-[#111111] px-14 md:px-20 py-16 md:py-20 flex flex-col justify-center ${isEven ? '' : '[direction:ltr]'}`}>
+        <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-4">{cat.subtitle}</p>
+        <h2 className="text-4xl md:text-5xl font-extralight text-[#F0EDE8] tracking-tight mb-5">{cat.title}</h2>
+        <div className="w-12 h-px bg-[#C47B4A] mb-7" />
         <p className="text-white/45 text-base leading-relaxed mb-10">{cat.description}</p>
         <Link
           href={cat.href}
-          className="inline-flex items-center gap-3 text-[#B8978A] text-xs tracking-[0.3em] uppercase hover:gap-6 transition-all duration-300 group"
+          className="inline-flex items-center gap-3 text-[#C47B4A] text-xs tracking-[0.3em] uppercase hover:gap-6 transition-all duration-300 group"
         >
           View Work
-          <div className="w-8 h-px bg-[#B8978A] group-hover:w-12 transition-all duration-300" />
+          <div className="w-8 h-px bg-[#C47B4A] group-hover:w-12 transition-all duration-300" />
         </Link>
       </div>
     </motion.div>
@@ -83,7 +83,7 @@ function CategoryBlock({ cat, index }: { cat: typeof categories[0]; index: numbe
 
 export default function PortfolioPage() {
   return (
-    <div className="bg-[#171212]">
+    <div className="bg-[#0D0D0D]">
 
       {/* Hero */}
       <section className="relative h-[55vh] flex items-end pb-20 overflow-hidden">
@@ -95,11 +95,11 @@ export default function PortfolioPage() {
         <div className="relative z-10 px-8 md:px-20 w-full">
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-4"
+            className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-4"
           >Selected Work</motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-extralight text-white tracking-tight leading-none"
+            className="text-5xl md:text-7xl font-extralight text-[#F0EDE8] tracking-tight leading-none"
           >The Portfolio</motion.h1>
         </div>
       </section>
@@ -112,14 +112,14 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-28 px-8 md:px-20 text-center bg-[#1e1916]">
-        <p className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-5">Let's Work Together</p>
-        <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-10">
+      <section className="py-28 px-8 md:px-20 text-center bg-[#111111]">
+        <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-5">Let's Work Together</p>
+        <h2 className="text-4xl md:text-5xl font-extralight text-[#F0EDE8] tracking-tight mb-10">
           Have a project in mind?
         </h2>
         <Link
           href="/contact"
-          className="inline-block bg-[#B8978A] text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:bg-[#d4b5a8] transition-all duration-300 font-medium"
+          className="inline-block copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium"
         >
           Book a Shoot
         </Link>

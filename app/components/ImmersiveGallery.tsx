@@ -76,7 +76,7 @@ export default function ImmersiveGallery() {
       {/* Sticky panel   locks to viewport during container scroll */}
       <div
         ref={stickyRef}
-        className="sticky top-0 h-screen bg-[#1e1916] overflow-hidden flex flex-col justify-center"
+        className="sticky top-0 h-screen bg-[#111111] overflow-hidden flex flex-col justify-center"
       >
         {/* Header */}
         <div ref={headerRef} className="max-w-5xl mx-auto px-8 md:px-20 mb-10 w-full flex-shrink-0">
@@ -87,8 +87,8 @@ export default function ImmersiveGallery() {
             className="flex items-end justify-between"
           >
             <div>
-              <p className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-3">Gallery</p>
-              <h2 className="text-4xl md:text-5xl font-light text-white tracking-tight">The Work</h2>
+              <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-3">Gallery</p>
+              <h2 className="text-4xl md:text-5xl font-light text-[#F0EDE8] tracking-tight">The Work</h2>
             </div>
             <p className="text-white/30 text-xs tracking-[0.3em] uppercase hidden md:block">
               Scroll to explore →

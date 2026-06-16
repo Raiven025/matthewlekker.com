@@ -11,17 +11,17 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#171212] border-t border-[#B8978A]/15">
+    <footer className="bg-[#0D0D0D] border-t border-[#C47B4A]/15">
       <div className="max-w-6xl mx-auto px-8 md:px-16 py-14">
 
         {/* Brand   centered on all sizes */}
         <div className="flex flex-col items-center text-center gap-3 mb-12">
-          <div className="w-10 h-10 border border-[#B8978A] flex items-center justify-center">
-            <span className="text-[#B8978A] font-bold text-sm tracking-wider">ML</span>
+          <div className="w-10 h-10 border border-[#C47B4A] flex items-center justify-center">
+            <span className="text-[#C47B4A] font-bold text-sm tracking-wider">ML</span>
           </div>
           <div>
-            <p className="text-white text-sm font-light tracking-[0.2em] uppercase leading-tight">Matthew Lekker</p>
-            <p className="text-[#B8978A] text-[10px] tracking-[0.35em] uppercase mt-1">Photography · NJ</p>
+            <p className="text-[#F0EDE8] text-sm font-light tracking-[0.2em] uppercase leading-tight">Matthew Lekker</p>
+            <p className="text-[#C47B4A] text-[10px] tracking-[0.35em] uppercase mt-1">Photography · NJ</p>
           </div>
         </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white/35 text-xs tracking-[0.25em] uppercase hover:text-[#B8978A] transition-colors duration-300"
+              className="text-white/35 text-xs tracking-[0.25em] uppercase hover:text-[#C47B4A] transition-colors duration-300"
             >
               {link.label}
             </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-3 mb-12">
           <a
             href="mailto:info@matthewlekker.com"
-            className="text-white/40 text-sm hover:text-[#B8978A] transition-colors duration-300"
+            className="text-white/40 text-sm hover:text-[#C47B4A] transition-colors duration-300"
           >
             info@matthewlekker.com
           </a>
@@ -50,7 +50,7 @@ export default function Footer() {
             href="https://www.instagram.com/matthewlekker/"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.2em] uppercase hover:text-[#B8978A] transition-colors duration-300"
+            className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.2em] uppercase hover:text-[#C47B4A] transition-colors duration-300"
           >
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>

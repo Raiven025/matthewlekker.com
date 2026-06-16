@@ -20,7 +20,7 @@ export default function Contact() {
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #B8978A 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 1px 1px, #C47B4A 1px, transparent 0)',
           backgroundSize: '40px 40px',
         }}
       />
@@ -31,7 +31,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-8"
+          className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-8"
         >
           Let's Work Together
         </motion.p>
@@ -40,18 +40,18 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-extralight text-white tracking-tight leading-none mb-8"
+          className="text-5xl md:text-7xl font-extralight text-[#F0EDE8] tracking-tight leading-none mb-8"
         >
           Ready to elevate
           <br />
-          <span className="text-[#B8978A]">your space?</span>
+          <span className="text-[#C47B4A]">your space?</span>
         </motion.h2>
 
         <motion.div
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-20 h-px bg-[#B8978A] mb-10"
+          className="w-20 h-px bg-[#C47B4A] mb-10"
         />
 
         <motion.p
@@ -71,13 +71,13 @@ export default function Contact() {
         >
           <Link
             href="/contact"
-            className="bg-[#B8978A] text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:bg-[#d4b5a8] transition-all duration-300 font-medium"
+            className="copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium"
           >
             Start a Project
           </Link>
           <a
             href="mailto:info@matthewlekker.com"
-            className="border border-white/20 text-white/60 text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#B8978A] hover:text-[#B8978A] transition-all duration-300"
+            className="border border-white/20 text-white/60 text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#C47B4A] hover:text-[#C47B4A] transition-all duration-300"
           >
             Send an Email
           </a>
