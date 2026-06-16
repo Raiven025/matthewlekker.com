@@ -95,7 +95,7 @@ export default function Testimonials() {
               </h2>
             </div>
             <a
-              href="https://www.google.com/maps/place/Lekker+Photography/@40.7891893,-74.05684,15z/data=!4m8!3m7!1s0x0:0xe906723ceeefd814!8m2!3d40.7891893!4d-74.05684!9m1!1b1"
+              href="https://www.google.com/maps/place/Lekker+Studios/@40.7891893,-74.05684,15z/data=!4m8!3m7!1s0x89c2587b743ba5d1:0xe906723ceeefd814!8m2!3d40.7891893!4d-74.05684!9m1!1b1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-[#C8825A] border border-[#C8825A]/30 px-5 py-3 hover:bg-[#C8825A]/5 hover:border-[#C8825A]/60 transition-all duration-300 self-start md:self-auto whitespace-nowrap"
