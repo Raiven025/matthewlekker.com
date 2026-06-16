@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --gold: #c9a96e;
-  --gold-light: #e8d5a3;
-  --dark: #0a0a0a;
-  --dark-2: #111111;
-  --dark-3: #1a1a1a;
-  --background: #0a0a0a;
+  --copper: #B8978A;
+  --copper-light: #d4b5a8;
+  --dark: #171212;
+  --dark-2: #1e1916;
+  --dark-3: #252019;
+  --background: #171212;
   --foreground: #ffffff;
+  --navy: #2F4966;
+  --taupe: #816F61;
+  --bronze: #7A483A;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -19,12 +22,12 @@
 body {
   background-color: var(--dark);
   color: #ffffff;
-  font-family: var(--font-inter), 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-eb-garamond), 'Georgia', serif;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-raleway), 'Helvetica Neue', sans-serif;
+  font-family: var(--font-cormorant), 'Georgia', serif;
   font-style: normal;
 }
 
@@ -35,25 +38,23 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--gold);
+  background: var(--copper);
   border-radius: 2px;
 }
 
 ::selection {
-  background: var(--gold);
+  background: var(--copper);
   color: var(--dark);
 }
 
-/* Remove default browser focus outlines; use gold ring for keyboard nav */
 *:focus {
   outline: none;
 }
 *:focus-visible {
-  outline: 1px solid var(--gold);
+  outline: 1px solid var(--copper);
   outline-offset: 2px;
 }
 
-/* Prevent image dragging */
 img {
   user-select: none;
   -webkit-user-drag: none;

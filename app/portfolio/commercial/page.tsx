@@ -1,9 +1,10 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import Lightbox from '@/app/components/Lightbox';
 
 const photos = [
   { src: '/images/Commercial/0J6A1097-Enhanced-NR-2.jpeg', alt: 'Commercial interior photography   NJ professional' },
@@ -17,50 +18,67 @@ const photos = [
 export default function CommercialPage() {
   const gridRef = useRef(null);
   const inView = useInView(gridRef, { once: true, margin: '-80px' });
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
-    <div className="bg-[#0a0a0a]">
-      <section className="bg-[#0a0a0a] pt-20 pb-6 px-8 md:px-20">
-        <Link href="/portfolio" className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.3em] uppercase hover:text-[#c9a96e] transition-colors mb-10">
+    <div className="bg-[#171212]">
+      <section className="bg-[#171212] pt-20 pb-6 px-8 md:px-20">
+        <Link href="/portfolio" className="inline-flex items-center gap-2 text-white/30 text-xs tracking-[0.3em] uppercase hover:text-[#B8978A] transition-colors mb-10">
           ← Portfolio
         </Link>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-          className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-4">Spaces</motion.p>
+          className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-4">Spaces</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
           className="text-5xl md:text-7xl font-extralight text-white tracking-tight">Commercial</motion.h1>
-        <div className="w-12 h-px bg-[#c9a96e] mt-8" />
+        <div className="w-12 h-px bg-[#B8978A] mt-8" />
       </section>
 
       <div className="w-full h-[60vh] relative overflow-hidden">
-        <Image src="/images/Commercial/0J6A1097-Enhanced-NR-2.jpeg" alt="Commercial interior photography   NJ" fill className="object-cover" priority sizes="100vw" />
+        <Image src="/images/Commercial/0J6A1097-Enhanced-NR-2.jpeg" alt="Commercial interior photography" fill className="object-cover" priority sizes="100vw" />
       </div>
 
-      <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {photos.map((photo, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 40 }}
+            <motion.button key={i}
+              initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative overflow-hidden group"
-              style={{ height: '420px' }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              onClick={() => setLightboxIndex(i)}
+              className="relative overflow-hidden group aspect-square cursor-pointer focus:outline-none"
             >
               <Image src={photo.src} alt={photo.alt} fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-500" />
-            </motion.div>
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                <svg className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                </svg>
+              </div>
+            </motion.button>
           ))}
         </div>
       </section>
 
       <section className="px-8 md:px-20 py-20 text-center border-t border-white/5">
         <Link href="/contact"
-          className="inline-block bg-[#c9a96e] text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:bg-[#e8d5a3] transition-all duration-300 font-medium">
+          className="inline-block bg-[#B8978A] text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:bg-[#d4b5a8] transition-all duration-300 font-medium">
           Book a Commercial Shoot
         </Link>
       </section>
+
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <Lightbox
+            photos={photos}
+            index={lightboxIndex}
+            onClose={() => setLightboxIndex(null)}
+            onNext={() => setLightboxIndex(i => i !== null ? Math.min(i + 1, photos.length - 1) : null)}
+            onPrev={() => setLightboxIndex(i => i !== null ? Math.max(i - 1, 0) : null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
