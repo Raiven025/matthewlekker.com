@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --copper: #B8978A;
-  --copper-light: #d4b5a8;
-  --dark: #171212;
-  --dark-2: #1e1916;
-  --dark-3: #252019;
-  --background: #171212;
-  --foreground: #ffffff;
-  --navy: #2F4966;
-  --taupe: #816F61;
-  --bronze: #7A483A;
+  --copper-dark: #C47B4A;
+  --copper-mid: #D4874E;
+  --copper-light: #E8A87C;
+  --copper-gradient: linear-gradient(135deg, #C47B4A 0%, #E8A87C 100%);
+  --dark: #0D0D0D;
+  --dark-2: #111111;
+  --dark-3: #161616;
+  --background: #0D0D0D;
+  --foreground: #F0EDE8;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,7 +20,7 @@
 
 body {
   background-color: var(--dark);
-  color: #ffffff;
+  color: #F0EDE8;
   font-family: var(--font-eb-garamond), 'Georgia', serif;
   overflow-x: hidden;
 }
@@ -38,12 +37,12 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--copper);
+  background: var(--copper-dark);
   border-radius: 2px;
 }
 
 ::selection {
-  background: var(--copper);
+  background: var(--copper-dark);
   color: var(--dark);
 }
 
@@ -51,11 +50,29 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 *:focus-visible {
-  outline: 1px solid var(--copper);
+  outline: 1px solid var(--copper-dark);
   outline-offset: 2px;
 }
 
 img {
   user-select: none;
   -webkit-user-drag: none;
+}
+
+@layer utilities {
+  .copper-gradient {
+    background: linear-gradient(135deg, #C47B4A 0%, #E8A87C 100%);
+  }
+  .copper-gradient-hover:hover {
+    background: linear-gradient(135deg, #D4874E 0%, #F0B98C 100%);
+  }
+  .copper-gradient-text {
+    background: linear-gradient(135deg, #C47B4A 0%, #E8A87C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .copper-border {
+    border-color: #C47B4A;
+  }
 }

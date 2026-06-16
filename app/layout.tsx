@@ -71,7 +71,7 @@ export default function RootLayout({
           href="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#171212] text-white">
+      <body className="min-h-full flex flex-col bg-[#0D0D0D] text-[#F0EDE8]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

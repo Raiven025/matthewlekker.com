@@ -34,7 +34,7 @@ export default function Hero() {
       {/* Decorative grid lines */}
       <div className="absolute inset-0 z-10 opacity-5"
         style={{
-          backgroundImage: 'linear-gradient(rgba(201,169,110,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,110,0.3) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(196,123,74,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(196,123,74,0.3) 1px, transparent 1px)',
           backgroundSize: '80px 80px',
         }}
       />
@@ -48,9 +48,9 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.3 }}
-          className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-6"
+          className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-6"
         >
-          New Jersey · Architectural & Interior Photography
+          Architectural & Interior Photography · Worldwide
         </motion.p>
 
         <motion.h1
@@ -58,11 +58,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-[3.2rem] md:text-[5rem] lg:text-[6.5rem] font-light tracking-wide text-white leading-[1.1] mb-6"
-          style={{ fontFamily: 'var(--font-raleway), sans-serif' }}
+          style={{ fontFamily: 'var(--font-cormorant), serif' }}
         >
           Framing
           <br />
-          <span className="text-[#B8978A]">Spaces</span>
+          <span className="text-[#C47B4A]">Spaces</span>
           <br />
           with Soul
         </motion.h1>
@@ -71,7 +71,7 @@ export default function Hero() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="w-24 h-px bg-[#B8978A] mx-auto my-8"
+          className="w-24 h-px bg-[#C47B4A] mx-auto my-8"
         />
 
         <motion.p
@@ -91,13 +91,13 @@ export default function Hero() {
         >
           <Link
             href="/portfolio"
-            className="bg-[#B8978A] text-black text-xs tracking-[0.3em] uppercase px-10 py-4 hover:bg-[#d4b5a8] transition-all duration-300 font-medium"
+            className="copper-gradient text-black text-xs tracking-[0.3em] uppercase px-10 py-4 hover:opacity-90 transition-all duration-300 font-medium"
           >
             View Portfolio
           </Link>
           <Link
             href="/contact"
-            className="border border-white/40 text-white text-xs tracking-[0.3em] uppercase px-10 py-4 hover:border-[#B8978A] hover:text-[#B8978A] transition-all duration-300"
+            className="border border-white/40 text-white text-xs tracking-[0.3em] uppercase px-10 py-4 hover:border-[#C47B4A] hover:text-[#C47B4A] transition-all duration-300"
           >
             Book a Shoot
           </Link>
@@ -114,7 +114,7 @@ export default function Hero() {
         <motion.div
           animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-px h-10 bg-gradient-to-b from-[#B8978A] to-transparent"
+          className="w-px h-10 bg-gradient-to-b from-[#C47B4A] to-transparent"
         />
       </motion.div>
     </section>

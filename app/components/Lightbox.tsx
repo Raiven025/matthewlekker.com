@@ -101,7 +101,7 @@ export default function Lightbox({ photos, index, onClose, onNext, onPrev }: Lig
           <button
             key={i}
             onClick={e => { e.stopPropagation(); }}
-            className={`w-1 h-1 rounded-full transition-all duration-300 ${i === index ? 'bg-[#B8978A] w-4' : 'bg-white/20'}`}
+            className={`w-1 h-1 rounded-full transition-all duration-300 ${i === index ? 'bg-[#C47B4A] w-4' : 'bg-white/20'}`}
           />
         ))}
       </div>
