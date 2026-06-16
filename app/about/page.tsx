@@ -59,7 +59,7 @@ export default function AboutPage() {
         <div className="relative z-10 px-8 md:px-20 w-full">
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-4"
+            className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-4"
           >About Matthew</motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
@@ -88,8 +88,8 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
-            <div className="absolute -bottom-5 -right-5 w-3/4 h-3/4 border border-[#C47B4A]/20 -z-10" />
-            <div className="absolute -top-5 -left-5 w-20 h-20 border-t border-l border-[#C47B4A]" />
+            <div className="absolute -bottom-5 -right-5 w-3/4 h-3/4 border border-[#C8825A]/20 -z-10" />
+            <div className="absolute -top-5 -left-5 w-20 h-20 border-t border-l border-[#C8825A]" />
           </motion.div>
 
           {/* Text */}
@@ -98,12 +98,12 @@ export default function AboutPage() {
             animate={bioInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-5">Elevated Perspectives</p>
+            <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-5">Elevated Perspectives</p>
             <h2 className="text-3xl md:text-4xl font-extralight text-[#F0EDE8] tracking-tight mb-6 leading-tight">
               Where storytelling<br />
-              <span className="text-[#C47B4A]">meets structure</span>
+              <span className="text-[#C8825A]">meets structure</span>
             </h2>
-            <div className="w-16 h-px bg-[#C47B4A] mb-8" />
+            <div className="w-16 h-px bg-[#C8825A] mb-8" />
             <p className="text-white/55 text-base leading-relaxed mb-6">
               I&apos;m Matthew Lesperance, a photographer where storytelling meets structure, available worldwide. I specialize in architectural and interior photography   working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
             </p>
@@ -135,7 +135,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="text-center"
             >
-              <p className="text-[#C47B4A] text-4xl font-extralight mb-3">{stat.number}</p>
+              <p className="text-[#C8825A] text-4xl font-extralight mb-3">{stat.number}</p>
               <p className="text-white/35 text-xs tracking-[0.25em] uppercase leading-relaxed">{stat.label}</p>
             </motion.div>
           ))}
@@ -151,7 +151,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="mb-14"
           >
-            <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-3">What I Offer</p>
+            <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-3">What I Offer</p>
             <h2 className="text-4xl md:text-5xl font-extralight text-[#F0EDE8] tracking-tight">Services</h2>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-5">
@@ -161,11 +161,11 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={servicesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="border border-white/5 hover:border-[#C47B4A]/25 p-10 transition-all duration-500 group"
+                className="border border-white/5 hover:border-[#C8825A]/25 p-10 transition-all duration-500 group"
               >
-                <div className="w-8 h-px bg-[#C47B4A] mb-6" />
-                <h3 className="text-white text-lg font-light tracking-wide mb-4 group-hover:text-[#C47B4A] transition-colors">{s.title}</h3>
-                <p className="text-white/40 text-sm leading-relaxed">{s.description}</p>
+                <div className="w-8 h-px bg-[#C8825A] mb-6" />
+                <h3 className="text-white text-lg font-light tracking-wide mb-4 group-hover:text-[#C8825A] transition-colors">{s.title}</h3>
+                <p className="text-[#888880] text-sm leading-relaxed">{s.description}</p>
               </motion.div>
             ))}
           </div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-3">How It Works</p>
+            <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-3">How It Works</p>
             <h2 className="text-4xl md:text-5xl font-extralight text-[#F0EDE8] tracking-tight">The Process</h2>
           </motion.div>
           <div className="grid md:grid-cols-4 gap-10">
@@ -192,10 +192,10 @@ export default function AboutPage() {
                 animate={processInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: i * 0.15 }}
               >
-                <p className="text-[#C47B4A]/25 text-5xl font-bold mb-5">{p.step}</p>
-                <div className="w-8 h-px bg-[#C47B4A] mb-5" />
+                <p className="text-[#C8825A]/25 text-5xl font-bold mb-5">{p.step}</p>
+                <div className="w-8 h-px bg-[#C8825A] mb-5" />
                 <h3 className="text-white text-base font-light tracking-wide mb-3">{p.title}</h3>
-                <p className="text-white/40 text-sm leading-relaxed">{p.description}</p>
+                <p className="text-[#888880] text-sm leading-relaxed">{p.description}</p>
               </motion.div>
             ))}
           </div>
@@ -204,10 +204,10 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="py-28 px-8 md:px-20 text-center">
-        <p className="text-[#C47B4A] text-xs tracking-[0.4em] uppercase mb-5">Ready?</p>
+        <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-5">Ready?</p>
         <h2 className="text-4xl md:text-5xl font-extralight text-[#F0EDE8] tracking-tight mb-10">
           Let&apos;s create something<br />
-          <span className="text-[#C47B4A]">extraordinary.</span>
+          <span className="text-[#C8825A]">extraordinary.</span>
         </h2>
         <Link
           href="/contact"

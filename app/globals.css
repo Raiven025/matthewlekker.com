@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --copper-dark: #C47B4A;
-  --copper-mid: #D4874E;
-  --copper-light: #E8A87C;
-  --copper-gradient: linear-gradient(135deg, #C47B4A 0%, #E8A87C 100%);
+  --copper-dark: #C8825A;
+  --copper-light: #E8A882;
+  --copper-gradient: linear-gradient(135deg, #0D0D0D, #C8825A, #E8A882);
+  --copper-accent-gradient: linear-gradient(135deg, #C8825A 0%, #E8A882 100%);
   --dark: #0D0D0D;
   --dark-2: #111111;
   --dark-3: #161616;
   --background: #0D0D0D;
   --foreground: #F0EDE8;
+  --muted: #888880;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -61,18 +62,18 @@ img {
 
 @layer utilities {
   .copper-gradient {
-    background: linear-gradient(135deg, #C47B4A 0%, #E8A87C 100%);
-  }
-  .copper-gradient-hover:hover {
-    background: linear-gradient(135deg, #D4874E 0%, #F0B98C 100%);
+    background: linear-gradient(135deg, #0D0D0D 0%, #C8825A 60%, #E8A882 100%);
   }
   .copper-gradient-text {
-    background: linear-gradient(135deg, #C47B4A 0%, #E8A87C 100%);
+    background: linear-gradient(135deg, #C8825A 0%, #E8A882 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   .copper-border {
-    border-color: #C47B4A;
+    border-color: #C8825A;
+  }
+  .text-muted {
+    color: #888880;
   }
 }
