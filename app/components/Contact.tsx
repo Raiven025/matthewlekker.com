@@ -60,7 +60,7 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-white/45 text-base leading-relaxed mb-14 max-w-md text-center"
         >
-          Whether you're an architect, designer, developer, or hospitality brand — let's create images that stop people in their tracks.
+          Whether you're an architect, designer, developer, or hospitality brand   let's create images that stop people in their tracks.
         </motion.p>
 
         <motion.div

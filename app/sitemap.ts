@@ -53,6 +53,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.8,
     },
-    // Blog excluded until content exists — currently noindex
+    // Blog excluded until content exists   currently noindex
   ];
 }

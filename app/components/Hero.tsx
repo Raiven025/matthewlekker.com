@@ -26,7 +26,7 @@ export default function Hero() {
             backgroundImage: `url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/AMqlLZQweECGbqM2/lekk4989-dxo_deepprime-3-large-oDrL06IDHBdwHOVp.jpeg)`,
           }}
         />
-        {/* Deep gradient overlay — different from original */}
+        {/* Deep gradient overlay   different from original */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/90" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/30" />
       </motion.div>
@@ -104,7 +104,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll line indicator — no text */}
+      {/* Scroll line indicator   no text */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

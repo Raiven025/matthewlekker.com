@@ -25,14 +25,14 @@ const services = [
   },
   {
     title: 'Hospitality & Hotels',
-    description: 'Hotels, restaurants, and event venues — every detail photographed to attract guests.',
+    description: 'Hotels, restaurants, and event venues   every detail photographed to attract guests.',
   },
 ];
 
 const process = [
   { step: '01', title: 'Consultation', description: 'We discuss your project, goals, timeline, and deliverables. No guesswork.' },
   { step: '02', title: 'Shoot Day', description: 'On-location photography with professional lighting, staging, and composition.' },
-  { step: '03', title: 'Editing', description: 'Expert post-processing — color grading, retouching, and detail enhancement.' },
+  { step: '03', title: 'Editing', description: 'Expert post-processing   color grading, retouching, and detail enhancement.' },
   { step: '04', title: 'Delivery', description: 'High-resolution images delivered via private gallery within the agreed timeline.' },
 ];
 
@@ -82,7 +82,7 @@ export default function AboutPage() {
             <div className="relative h-[540px] overflow-hidden">
               <Image
                 src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=900,fit=crop/AMqlLZQweECGbqM2/1612275894979-mePJN4ke0NU5KGan.jpeg"
-                alt="Matthew Lesperance — Architectural & Interior Photographer, New Jersey"
+                alt="Matthew Lesperance   Architectural & Interior Photographer, New Jersey"
                 fill className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
@@ -105,13 +105,13 @@ export default function AboutPage() {
             </h2>
             <div className="w-16 h-px bg-[#c9a96e] mb-8" />
             <p className="text-white/55 text-base leading-relaxed mb-6">
-              I&apos;m Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography — working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
+              I&apos;m Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography   working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
             </p>
             <p className="text-white/55 text-base leading-relaxed mb-6">
               Clients come to me for my calm creative direction, editorial eye, and the ability to make spaces feel as good as they look. With years of hands-on experience, I&apos;ve built a signature style rooted in natural light, thoughtful composition, and a deep respect for the craft of design.
             </p>
             <p className="text-white/55 text-base leading-relaxed mb-12">
-              Translating a three-dimensional space into a two-dimensional image isn&apos;t just about the click of a shutter — it&apos;s about capturing feeling, atmosphere, and identity.
+              Translating a three-dimensional space into a two-dimensional image isn&apos;t just about the click of a shutter   it&apos;s about capturing feeling, atmosphere, and identity.
             </p>
             <Link
               href="/contact"

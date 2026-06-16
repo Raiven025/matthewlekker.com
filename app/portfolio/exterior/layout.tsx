@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Exterior Architecture Photography NJ | Matthew Lekker",
-  description: "Exterior architecture and facade photography in New Jersey — residential buildings, commercial structures, and aerial photography serving architects and developers across NJ, NY, and CT.",
+  description: "Exterior architecture and facade photography in New Jersey   residential buildings, commercial structures, and aerial photography serving architects and developers across NJ, NY, and CT.",
   alternates: {
     canonical: "https://matthewlekker.com/portfolio/exterior",
   },

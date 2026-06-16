@@ -76,7 +76,7 @@ export default function ContactPage() {
         <section ref={ref} className="px-8 md:px-20 py-28 max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-start">
 
-            {/* Left — Info */}
+            {/* Left   Info */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -89,7 +89,7 @@ export default function ContactPage() {
               </h2>
               <div className="w-16 h-px bg-[#c9a96e] mb-8" />
               <p className="text-white/50 text-base leading-relaxed mb-10">
-                Whether you're an architect, interior designer, developer, or hospitality brand — Matthew is available for projects throughout New Jersey and the Tri-State Area.
+                Whether you're an architect, interior designer, developer, or hospitality brand   Matthew is available for projects throughout New Jersey and the Tri-State Area.
               </p>
 
               <div className="space-y-6">
@@ -112,7 +112,7 @@ export default function ContactPage() {
               </div>
             </motion.div>
 
-            {/* Right — Form */}
+            {/* Right   Form */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     <textarea
                       name="message" required value={form.message} onChange={handleChange} rows={6}
                       className="w-full bg-transparent border border-white/10 focus:border-[#c9a96e] px-4 py-3 text-white text-sm outline-none transition-colors resize-none placeholder:text-white/20"
-                      placeholder="Tell Matthew about your project — location, scope, timeline…"
+                      placeholder="Tell Matthew about your project   location, scope, timeline…"
                     />
                   </div>
 

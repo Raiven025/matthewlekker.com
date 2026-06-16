@@ -6,15 +6,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const photos = [
-  { src: '/images/Architecture/0J6A0307-Enhanced-NR.jpeg', alt: 'Contemporary residential architecture exterior — NJ architecture photography' },
-  { src: '/images/Architecture/0J6A6651...CROP.jpeg', alt: 'Architectural exterior — NJ photography' },
-  { src: '/images/Architecture/8.jpg', alt: 'Residential exterior — NJ architectural photography' },
-  { src: '/images/Architecture/DJI_0432.jpeg', alt: 'Aerial drone architecture shot — exterior photography NJ' },
-  { src: '/images/Architecture/DJI_0447.jpeg', alt: 'Residential exterior from above — drone architecture photography NJ' },
-  { src: '/images/Architecture/DJI_0486.jpeg', alt: 'Architectural exterior drone view — NJ photography' },
-  { src: '/images/Architecture/DJI_0558.jpeg', alt: 'Exterior architecture aerial — NJ drone photography' },
-  { src: '/images/Architecture/DJI_0594.jpeg', alt: 'Exterior architecture with dramatic sky — NJ aerial photography' },
-  { src: '/images/Architecture/DJI_0597-1.jpeg', alt: 'Architectural exterior drone shot — NJ photography' },
+  { src: '/images/Architecture/0J6A0307-Enhanced-NR.jpeg', alt: 'Contemporary residential architecture exterior   NJ architecture photography' },
+  { src: '/images/Architecture/0J6A6651...CROP.jpeg', alt: 'Architectural exterior   NJ photography' },
+  { src: '/images/Architecture/8.jpg', alt: 'Residential exterior   NJ architectural photography' },
+  { src: '/images/Architecture/DJI_0432.jpeg', alt: 'Aerial drone architecture shot   exterior photography NJ' },
+  { src: '/images/Architecture/DJI_0447.jpeg', alt: 'Residential exterior from above   drone architecture photography NJ' },
+  { src: '/images/Architecture/DJI_0486.jpeg', alt: 'Architectural exterior drone view   NJ photography' },
+  { src: '/images/Architecture/DJI_0558.jpeg', alt: 'Exterior architecture aerial   NJ drone photography' },
+  { src: '/images/Architecture/DJI_0594.jpeg', alt: 'Exterior architecture with dramatic sky   NJ aerial photography' },
+  { src: '/images/Architecture/DJI_0597-1.jpeg', alt: 'Architectural exterior drone shot   NJ photography' },
 ];
 
 export default function ExteriorPage() {
@@ -35,7 +35,7 @@ export default function ExteriorPage() {
       </section>
 
       <div className="w-full h-[60vh] relative overflow-hidden">
-        <Image src="/images/Architecture/0J6A0307-Enhanced-NR.jpeg" alt="Contemporary residential architecture exterior — NJ" fill className="object-cover" priority sizes="100vw" />
+        <Image src="/images/Architecture/0J6A0307-Enhanced-NR.jpeg" alt="Contemporary residential architecture exterior   NJ" fill className="object-cover" priority sizes="100vw" />
       </div>
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-6xl mx-auto">
