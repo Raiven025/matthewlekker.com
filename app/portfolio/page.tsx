@@ -38,6 +38,14 @@ const categories = [
     image: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg',
     href: '/portfolio/hospitality',
   },
+  {
+    id: 'design-details',
+    title: 'Design Details & Product',
+    subtitle: 'Objects & Craftsmanship',
+    description: 'The art of the close-up — curated product and design detail photography that celebrates craftsmanship.',
+    image: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg',
+    href: '/design-details',
+  },
 ];
 
 function CategoryBlock({ cat, index }: { cat: typeof categories[0]; index: number }) {
