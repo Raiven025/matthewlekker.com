@@ -9,31 +9,31 @@ const testimonials = [
     quote: "Matt Lesperance has become my go-to photographer. He is super personable, has great ideas, and is very easy to work with. He has a whole menu of services to cater to your needs and budget. He makes every listing stand out and showcases every feature to get the property sold.",
     name: "Arianne Gomez Rodriguez",
     role: "Real Estate · Aerial Photography",
-    photo: "/testimonials/arianne.jpg",
+    photo: "/testimonials/Arianne.png",
   },
   {
     quote: "I can't say enough about Matt and the team at Lekker. My real estate photos for clients are always amazing. Matt has also worked with me personally on passion projects and events. His attention to detail and ability to guide the process is unmatched. In a word, obsessed.",
     name: "Nicole Romanik",
     role: "Local Guide · Real Estate",
-    photo: "/testimonials/nicole-romanik.jpg",
+    photo: "/testimonials/Nicole.png",
   },
   {
     quote: "Matt was the most professional and amazing photographer I've ever worked with. He made our house look incredible and was so warm and easy to work with. He was responsive through text, phone, and email. You won't be sorry, Matt and his company are wonderful.",
     name: "Margaret Geib",
     role: "Residential Photography",
-    photo: "/testimonials/margaret.jpg",
+    photo: "/testimonials/Margaret.png",
   },
   {
     quote: "In my 17 years of working in real estate, I've worked with many great photographers. Matt pays such close attention to detail, takes pride in his work, and puts out an amazing finished product. My clients have been so impressed with his work. Trust me.",
     name: "Nicole Moody",
     role: "Real Estate · 17 Years Experience",
-    photo: "/testimonials/nicole-moody.jpg",
+    photo: "/testimonials/NicoleM.png",
   },
   {
     quote: "Matt is ACTUALLY THE BEST. His knowledge of real estate and tourism adds a unique perspective and understanding. His vision and attention to detail is impeccable. He's one of the most helpful individuals I've ever worked with and a genuine pleasure to be around.",
     name: "Nadine Khalil",
     role: "Real Estate & Tourism",
-    photo: "/testimonials/nadine.jpg",
+    photo: "/testimonials/Nadine.png",
   },
 ];
 
