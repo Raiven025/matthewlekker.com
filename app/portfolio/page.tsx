@@ -43,7 +43,7 @@ const categories = [
     title: 'Design Details & Product',
     subtitle: 'Objects & Craftsmanship',
     description: 'The art of the close-up — curated product and design detail photography that celebrates craftsmanship.',
-    image: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg',
+    image: '/images/Interiors/LEKK0110.jpg',
     href: '/design-details',
   },
 ];

@@ -20,7 +20,7 @@ export default function DesignDetailsTeaser() {
         {/* Image */}
         <Link href="/design-details" className="block relative h-[440px] md:h-[580px] overflow-hidden group">
           <Image
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=800,fit=crop/AMqlLZQweECGbqM2/hotel-edit-lights-off-mnlJBRJ04buk5bnK.jpg"
+            src="/images/Interiors/LEKK0110.jpg"
             alt="Design Details & Product Photography"
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"

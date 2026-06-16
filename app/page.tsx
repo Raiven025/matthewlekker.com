@@ -5,7 +5,6 @@ import About from "./components/About";
 import Testimonials from "./components/Testimonials";
 import ImmersiveGallery from "./components/ImmersiveGallery";
 import Contact from "./components/Contact";
-import DesignDetailsTeaser from "./components/DesignDetailsTeaser";
 
 export const metadata: Metadata = {
   alternates: {
@@ -67,7 +66,6 @@ export default function Home() {
       <About />
       <Testimonials />
       <ImmersiveGallery />
-      <DesignDetailsTeaser />
       <Contact />
     </>
   );
