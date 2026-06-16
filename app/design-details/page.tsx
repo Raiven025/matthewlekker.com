@@ -7,8 +7,8 @@ import Link from 'next/link';
 import Lightbox from '@/app/components/Lightbox';
 
 const photos: { src: string; alt: string }[] = [
-  // Add product & design detail images here
-  // Example: { src: '/images/DesignDetails/filename.jpg', alt: 'Design detail description' },
+  // Add design detail & product images here
+  // Example: { src: '/images/DesignDetails/filename.jpg', alt: 'Description' },
 ];
 
 export default function DesignDetailsPage() {
@@ -19,19 +19,20 @@ export default function DesignDetailsPage() {
   return (
     <div className="bg-[#0D0D0D]">
       <section className="bg-[#0D0D0D] pt-20 pb-6 px-8 md:px-20">
-        <Link href="/portfolio" className="inline-flex items-center gap-2 text-[#F0EDE8]/30 text-xs tracking-[0.3em] uppercase hover:text-[#C8825A] transition-colors mb-10">
-          ← Portfolio
-        </Link>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-          className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-4">Objects & Spaces</motion.p>
+          className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-4">Objects & Craftsmanship</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-extralight text-[#F0EDE8] tracking-tight">Design Details</motion.h1>
+          className="text-5xl md:text-7xl font-extralight text-[#F0EDE8] tracking-tight">Design Details<br /><span className="text-[#C8825A]">&amp; Product</span></motion.h1>
         <div className="w-12 h-px bg-[#C8825A] mt-8" />
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-[#888880] text-base leading-relaxed mt-6 max-w-xl">
+          Close-up photography that celebrates the details — materials, textures, finishes, and the craftsmanship behind beautifully designed products and spaces.
+        </motion.p>
       </section>
 
       {photos.length > 0 ? (
         <>
-          <div className="w-full h-[60vh] relative overflow-hidden">
+          <div className="w-full h-[60vh] relative overflow-hidden mt-10">
             <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover" priority sizes="100vw" />
           </div>
 
@@ -70,7 +71,7 @@ export default function DesignDetailsPage() {
       <section className="px-8 md:px-20 py-20 text-center border-t border-white/5">
         <Link href="/contact"
           className="inline-block copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium">
-          Book a Design Detail Shoot
+          Book a Product Shoot
         </Link>
       </section>
 
