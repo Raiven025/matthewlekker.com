@@ -40,6 +40,15 @@ const categories = [
   },
 ];
 
+const designDetails = {
+  id: 'design-details',
+  title: 'Design Details & Product',
+  subtitle: 'Objects & Craftsmanship',
+  description: 'The art of the close-up — curated product and design detail photography that celebrates craftsmanship, texture, and form.',
+  image: '/images/Interiors/LEKK0110.jpg',
+  href: '/design-details',
+};
+
 function CategoryCard({ cat, index }: { cat: typeof categories[0]; index: number }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
@@ -131,6 +140,11 @@ export default function Portfolio() {
           {categories.map((cat, i) => (
             <CategoryCard key={cat.id} cat={cat} index={i} />
           ))}
+        </div>
+
+        {/* Design Details — full width below */}
+        <div className="mt-6">
+          <CategoryCard cat={designDetails} index={4} />
         </div>
 
       </div>
