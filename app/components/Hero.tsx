@@ -48,7 +48,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.3 }}
-          className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-6"
+          className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-6"
         >
           New Jersey · Architectural & Interior Photography
         </motion.p>
@@ -62,7 +62,7 @@ export default function Hero() {
         >
           Framing
           <br />
-          <span className="text-[#c9a96e]">Spaces</span>
+          <span className="text-[#B8978A]">Spaces</span>
           <br />
           with Soul
         </motion.h1>
@@ -71,7 +71,7 @@ export default function Hero() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="w-24 h-px bg-[#c9a96e] mx-auto my-8"
+          className="w-24 h-px bg-[#B8978A] mx-auto my-8"
         />
 
         <motion.p
@@ -91,13 +91,13 @@ export default function Hero() {
         >
           <Link
             href="/portfolio"
-            className="bg-[#c9a96e] text-black text-xs tracking-[0.3em] uppercase px-10 py-4 hover:bg-[#e8d5a3] transition-all duration-300 font-medium"
+            className="bg-[#B8978A] text-black text-xs tracking-[0.3em] uppercase px-10 py-4 hover:bg-[#d4b5a8] transition-all duration-300 font-medium"
           >
             View Portfolio
           </Link>
           <Link
             href="/contact"
-            className="border border-white/40 text-white text-xs tracking-[0.3em] uppercase px-10 py-4 hover:border-[#c9a96e] hover:text-[#c9a96e] transition-all duration-300"
+            className="border border-white/40 text-white text-xs tracking-[0.3em] uppercase px-10 py-4 hover:border-[#B8978A] hover:text-[#B8978A] transition-all duration-300"
           >
             Book a Shoot
           </Link>
@@ -114,7 +114,7 @@ export default function Hero() {
         <motion.div
           animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-px h-10 bg-gradient-to-b from-[#c9a96e] to-transparent"
+          className="w-px h-10 bg-gradient-to-b from-[#B8978A] to-transparent"
         />
       </motion.div>
     </section>

@@ -38,7 +38,7 @@ export default function About() {
   const bioInView = useInView(bioRef, { once: true, margin: '-80px' });
 
   return (
-    <section className="bg-[#111111] py-28 px-8 md:px-20">
+    <section className="bg-[#1e1916] py-28 px-8 md:px-20">
       <div className="max-w-5xl mx-auto">
 
         {/* Stats row   top */}
@@ -51,7 +51,7 @@ export default function About() {
               transition={{ duration: 0.7, delay: i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-center"
             >
-              <p className="text-[#c9a96e] text-3xl md:text-5xl font-light mb-3 tabular-nums"
+              <p className="text-[#B8978A] text-3xl md:text-5xl font-light mb-3 tabular-nums"
                 style={{ fontFamily: 'var(--font-raleway), sans-serif' }}>
                 {stat.display}
               </p>
@@ -68,13 +68,13 @@ export default function About() {
           transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="max-w-2xl mx-auto text-center"
         >
-          <p className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-5">About Matthew</p>
+          <p className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-5">About Matthew</p>
           <h2 className="text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight mb-6">
             Capturing the art
             <br />
-            <span className="text-[#c9a96e]">behind every space</span>
+            <span className="text-[#B8978A]">behind every space</span>
           </h2>
-          <div className="w-12 h-px bg-[#c9a96e] mx-auto mb-8" />
+          <div className="w-12 h-px bg-[#B8978A] mx-auto mb-8" />
           <p className="text-white/50 text-base leading-relaxed mb-5">
             I&apos;m Matthew Lesperance, a New Jersey-based photographer where storytelling meets structure. I specialize in architectural and interior photography   working closely with architects, interior designers, builders, and boutique hotels to bring their vision to life through clean, intentional imagery.
           </p>
@@ -83,7 +83,7 @@ export default function About() {
           </p>
           <Link
             href="/about"
-            className="inline-flex items-center gap-3 text-white/50 text-xs tracking-[0.3em] uppercase hover:text-[#c9a96e] transition-colors duration-300 group"
+            className="inline-flex items-center gap-3 text-white/50 text-xs tracking-[0.3em] uppercase hover:text-[#B8978A] transition-colors duration-300 group"
           >
             Read Full Story
             <div className="w-8 h-px bg-current group-hover:w-12 transition-all duration-300" />

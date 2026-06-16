@@ -35,12 +35,12 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 border border-[#c9a96e] flex items-center justify-center">
-              <span className="text-[#c9a96e] font-bold text-lg tracking-wider">ML</span>
+            <div className="w-10 h-10 border border-[#B8978A] flex items-center justify-center">
+              <span className="text-[#B8978A] font-bold text-lg tracking-wider">ML</span>
             </div>
             <div className="hidden sm:block">
               <p className="text-white text-sm font-light tracking-[0.2em] uppercase">Matthew Lekker</p>
-              <p className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase">Photography</p>
+              <p className="text-[#B8978A] text-xs tracking-[0.3em] uppercase">Photography</p>
             </div>
           </Link>
 
@@ -50,10 +50,10 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-white/70 hover:text-[#c9a96e] text-xs tracking-[0.25em] uppercase transition-colors duration-300 relative group"
+                  className="text-white/70 hover:text-[#B8978A] text-xs tracking-[0.25em] uppercase transition-colors duration-300 relative group"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#c9a96e] group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#B8978A] group-hover:w-full transition-all duration-300" />
                 </Link>
               </li>
             ))}
@@ -62,7 +62,7 @@ export default function Navbar() {
           {/* CTA */}
           <Link
             href="/contact"
-            className="hidden md:block border border-[#c9a96e] text-[#c9a96e] text-xs tracking-[0.25em] uppercase px-5 py-2.5 hover:bg-[#c9a96e] hover:text-black transition-all duration-300"
+            className="hidden md:block border border-[#B8978A] text-[#B8978A] text-xs tracking-[0.25em] uppercase px-5 py-2.5 hover:bg-[#B8978A] hover:text-black transition-all duration-300"
           >
             Book a Shoot
           </Link>
@@ -108,7 +108,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-white text-3xl font-light tracking-widest uppercase hover:text-[#c9a96e] transition-colors"
+                  className="text-white text-3xl font-light tracking-widest uppercase hover:text-[#B8978A] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -118,7 +118,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="mt-4 border border-[#c9a96e] text-[#c9a96e] text-sm tracking-widest uppercase px-8 py-3 hover:bg-[#c9a96e] hover:text-black transition-all"
+                className="mt-4 border border-[#B8978A] text-[#B8978A] text-sm tracking-widest uppercase px-8 py-3 hover:bg-[#B8978A] hover:text-black transition-all"
               >
                 Book a Shoot
               </Link>

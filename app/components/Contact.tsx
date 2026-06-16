@@ -20,7 +20,7 @@ export default function Contact() {
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #c9a96e 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 1px 1px, #B8978A 1px, transparent 0)',
           backgroundSize: '40px 40px',
         }}
       />
@@ -31,7 +31,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-8"
+          className="text-[#B8978A] text-xs tracking-[0.4em] uppercase mb-8"
         >
           Let's Work Together
         </motion.p>
@@ -44,14 +44,14 @@ export default function Contact() {
         >
           Ready to elevate
           <br />
-          <span className="text-[#c9a96e]">your space?</span>
+          <span className="text-[#B8978A]">your space?</span>
         </motion.h2>
 
         <motion.div
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-20 h-px bg-[#c9a96e] mb-10"
+          className="w-20 h-px bg-[#B8978A] mb-10"
         />
 
         <motion.p
@@ -71,13 +71,13 @@ export default function Contact() {
         >
           <Link
             href="/contact"
-            className="bg-[#c9a96e] text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:bg-[#e8d5a3] transition-all duration-300 font-medium"
+            className="bg-[#B8978A] text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:bg-[#d4b5a8] transition-all duration-300 font-medium"
           >
             Start a Project
           </Link>
           <a
             href="mailto:info@matthewlekker.com"
-            className="border border-white/20 text-white/60 text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#c9a96e] hover:text-[#c9a96e] transition-all duration-300"
+            className="border border-white/20 text-white/60 text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#B8978A] hover:text-[#B8978A] transition-all duration-300"
           >
             Send an Email
           </a>
