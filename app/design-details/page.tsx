@@ -7,8 +7,16 @@ import Link from 'next/link';
 import Lightbox from '@/app/components/Lightbox';
 
 const photos: { src: string; alt: string }[] = [
-  // Add design detail & product images here
-  // Example: { src: '/images/DesignDetails/filename.jpg', alt: 'Description' },
+  { src: '/images/Interiors/LEKK0094.jpg', alt: 'Fabuwood drawer with cutlery organizer — design detail photography' },
+  { src: '/images/Interiors/LEKK0100.jpg', alt: 'Fabuwood drawer insert with knife block — cabinet detail photography' },
+  { src: '/images/Interiors/LEKK0101.jpg', alt: 'Fabuwood cutlery organizer drawer — product detail photography' },
+  { src: '/images/Interiors/LEKK0103.jpg', alt: 'Open drawer with cutlery and knife insert — kitchen detail photography' },
+  { src: '/images/Interiors/LEKK0110.jpg', alt: 'Fabuwood pull-out spice cabinet — product detail photography' },
+  { src: '/images/Interiors/LEKK0112.jpg', alt: 'Fabuwood pull-out pantry rack — cabinet detail photography' },
+  { src: '/images/Interiors/0J6A0824.jpg', alt: 'Professional range with pot filler — kitchen detail photography' },
+  { src: '/images/Interiors/LEKK4231.jpeg', alt: 'Freestanding bathtub and stone tile — bathroom detail photography' },
+  { src: '/images/Interiors/LEKK8892.jpeg', alt: 'Overhead staircase detail — architectural design photography' },
+  { src: '/images/Interiors/0J6A0188-Edit.jpg', alt: 'Butler pantry wet bar — design detail photography' },
 ];
 
 export default function DesignDetailsPage() {
