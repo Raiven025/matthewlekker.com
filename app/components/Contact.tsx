@@ -76,7 +76,7 @@ export default function Contact() {
             Start a Project
           </Link>
           <a
-            href="mailto:info@matthewlekker.com"
+            href="mailto:matthew@matthewlekker.com"
             className="border border-white/20 text-[#888880] text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#C8825A] hover:text-[#C8825A] transition-all duration-300"
           >
             Send an Email

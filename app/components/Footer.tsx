@@ -41,10 +41,10 @@ export default function Footer() {
         {/* Contact   centered */}
         <div className="flex flex-col items-center gap-3 mb-12">
           <a
-            href="mailto:info@matthewlekker.com"
+            href="mailto:matthew@matthewlekker.com"
             className="text-[#888880] text-sm hover:text-[#C8825A] transition-colors duration-300"
           >
-            info@matthewlekker.com
+            matthew@matthewlekker.com
           </a>
           <a
             href="https://www.instagram.com/matthewlekker/"
