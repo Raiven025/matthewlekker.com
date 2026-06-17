@@ -2,40 +2,9 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
+import reviews from '@/app/data/reviews';
 
-const testimonials = [
-  {
-    quote: "Matt Lesperance has become my go-to photographer. He is super personable, has great ideas, and is very easy to work with. He has a whole menu of services to cater to your needs and budget. He makes every listing stand out and showcases every feature to get the property sold.",
-    name: "Arianne Gomez Rodriguez",
-    role: "Real Estate · Aerial Photography",
-    photo: "/testimonials/Arianne.png",
-  },
-  {
-    quote: "I can't say enough about Matt and the team at Lekker. My real estate photos for clients are always amazing. Matt has also worked with me personally on passion projects and events. His attention to detail and ability to guide the process is unmatched. In a word, obsessed.",
-    name: "Nicole Romanik",
-    role: "Local Guide · Real Estate",
-    photo: "/testimonials/Nicole.png",
-  },
-  {
-    quote: "Matt was the most professional and amazing photographer I've ever worked with. He made our house look incredible and was so warm and easy to work with. He was responsive through text, phone, and email. You won't be sorry, Matt and his company are wonderful.",
-    name: "Margaret Geib",
-    role: "Residential Photography",
-    photo: "/testimonials/Margaret.png",
-  },
-  {
-    quote: "In my 17 years of working in real estate, I've worked with many great photographers. Matt pays such close attention to detail, takes pride in his work, and puts out an amazing finished product. My clients have been so impressed with his work. Trust me.",
-    name: "Nicole Moody",
-    role: "Real Estate · 17 Years Experience",
-    photo: "/testimonials/NicoleM.png",
-  },
-  {
-    quote: "Matt is ACTUALLY THE BEST. His knowledge of real estate and tourism adds a unique perspective and understanding. His vision and attention to detail is impeccable. He's one of the most helpful individuals I've ever worked with and a genuine pleasure to be around.",
-    name: "Nadine Khalil",
-    role: "Real Estate & Tourism",
-    photo: "/testimonials/Nadine.png",
-  },
-];
+const pinned = reviews.filter(r => r.pinned);
 
 const Stars = () => (
   <div className="flex gap-1 mb-6">
@@ -46,6 +15,20 @@ const Stars = () => (
     ))}
   </div>
 );
+
+function Avatar({ name }: { name: string }) {
+  const initials = name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+  const colors = ['#C8825A', '#8B6B4A', '#A07050', '#D4956A', '#B87A55'];
+  const color = colors[name.charCodeAt(0) % colors.length];
+  return (
+    <div
+      className="w-11 h-11 rounded-full flex-shrink-0 flex items-center justify-center text-black text-sm font-medium border border-[#C8825A]/20"
+      style={{ background: color }}
+    >
+      {initials}
+    </div>
+  );
+}
 
 export default function Testimonials() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -86,14 +69,11 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="flex flex-col md:flex-row md:items-end md:justify-between gap-6"
           >
-            <div>
-              <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-3">Google Reviews</p>
-              <h2 className="text-4xl md:text-5xl font-light text-[#F0EDE8] tracking-tight">
-                What clients say
-              </h2>
-            </div>
+            <p className="text-[#C8825A] text-xs tracking-[0.4em] uppercase mb-3">Google Reviews</p>
+            <h2 className="text-4xl md:text-5xl font-light text-[#F0EDE8] tracking-tight">
+              What clients say
+            </h2>
           </motion.div>
         </div>
 
@@ -103,7 +83,7 @@ export default function Testimonials() {
           style={{ x }}
           className="flex gap-6 pl-8 md:pl-20 pr-20 will-change-transform"
         >
-          {testimonials.map((t, i) => (
+          {pinned.map((r, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
@@ -113,28 +93,18 @@ export default function Testimonials() {
             >
               <Stars />
               <p className="text-[#888880] text-sm leading-relaxed flex-1 mb-8">
-                &ldquo;{t.quote}&rdquo;
+                &ldquo;{r.quote}&rdquo;
               </p>
               <div className="flex items-center gap-4 pt-5 border-t border-white/5">
-                <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0 border border-[#C8825A]/20">
-                  <Image
-                    src={t.photo}
-                    alt={t.name}
-                    fill
-                    sizes="44px"
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
+                <Avatar name={r.name} />
                 <div>
-                  <p className="text-[#F0EDE8] text-sm font-light">{t.name}</p>
-                  <p className="text-[#888880]/60 text-xs tracking-wide mt-0.5">{t.role}</p>
+                  <p className="text-[#F0EDE8] text-sm font-light">{r.name}</p>
+                  <p className="text-[#888880]/60 text-xs tracking-wide mt-0.5">{r.role}</p>
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </div>
   );

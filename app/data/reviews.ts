@@ -5,6 +5,7 @@ export type Review = {
   pinned: boolean;
 };
 
+// Set pinned: true on any 5 reviews to display them on the site.
 const reviews: Review[] = [
   {
     name: 'Arianne Gomez Rodriguez',
@@ -15,13 +16,13 @@ const reviews: Review[] = [
   {
     name: 'Nicole Romanik',
     role: 'Local Guide · Real Estate',
-    quote: "I can't say enough about Matt and the team. My real estate photos for clients are always amazing. Matt has also worked with me personally on passion projects and events. His attention to detail and ability to guide the process is unmatched. In a word, obsessed.",
+    quote: "I can't say enough about Matt. My real estate photos for clients are always amazing. Matt has also worked with me personally on passion projects and events. His attention to detail and ability to guide the process is unmatched. In a word, obsessed.",
     pinned: true,
   },
   {
     name: 'Margaret Geib',
     role: 'Residential Photography',
-    quote: 'Matt was the most professional and amazing photographer I\'ve ever worked with. He made our house look incredible and was so warm and easy to work with. He was responsive through text, phone, and email. You won\'t be sorry, Matt and his company are wonderful.',
+    quote: "Matt was the most professional and amazing photographer I've ever worked with. He made our house look incredible and was so warm and easy to work with. He was responsive through text, phone, and email. You won't be sorry — Matt and his company are wonderful.",
     pinned: true,
   },
   {
@@ -39,7 +40,7 @@ const reviews: Review[] = [
   {
     name: 'Giannina',
     role: 'Real Estate Photography',
-    quote: 'Matthew was incredible to work with. He was easy to communicate with, on time for our appointment and made my client feel comfortable during the process of photographing the property. We were both impressed with his professionalism and would highly recommend. Thanks Matthew!',
+    quote: 'Matthew was incredible to work with. He was easy to communicate with, on time for our appointment and made my client feel comfortable during the process of photographing the property. We were both impressed with his professionalism and would highly recommend.',
     pinned: false,
   },
   {
@@ -51,13 +52,13 @@ const reviews: Review[] = [
   {
     name: 'Ira Goodman',
     role: 'Your Smiling Realtor · Local Guide',
-    quote: "Matthew always does a great job in terms of capturing the essence of the property, or of a home. Matthew has always been extremely pleasant to work with and gets the job done very well. Clients comment on the fact that the pictures are really accurate! I have been using and recommending him since the very beginning.",
+    quote: "Matthew always does a great job capturing the essence of a property or home. He has always been extremely pleasant to work with and gets the job done very well. Clients comment on the fact that the pictures are really accurate! I have been using and recommending him since the very beginning.",
     pinned: false,
   },
   {
     name: 'Tara Vitta-Vimbor',
     role: 'Real Estate Photography',
-    quote: "Matt is the only photographer I will use for my real estate business! He is the upmost professional and perfectionist and is always on the cutting edge of photography and videography technology. I have used Matt for 4 of my listings now — his photos have elevated my marketing beyond what any other photography service could provide. I will never use another photographer.",
+    quote: "Matt is the only photographer I will use for my real estate business! He is the upmost professional and perfectionist, always on the cutting edge of photography and videography technology. I have used Matt for 4 of my listings — his photos have elevated my marketing beyond what any other photography service could provide. I will never use another photographer.",
     pinned: false,
   },
   {
@@ -69,13 +70,13 @@ const reviews: Review[] = [
   {
     name: 'Roselia Mouridy',
     role: 'Real Estate Photography',
-    quote: "Matthew's photographers are always top quality and professional. Matt works as a team with me to get the best possible outcome for every home. He shows up on time and has pride in his work — I can always count on him to consistently deliver top end photographs. I highly recommend Matthew to anyone looking for quality work.",
+    quote: "Matthew's work is always top quality and professional. He works as a team with me to get the best possible outcome for every home. He shows up on time and has pride in his work — I can always count on him to consistently deliver top end photographs.",
     pinned: false,
   },
   {
     name: 'Tamara Balsamides',
     role: 'Residential Photography',
-    quote: "Today Matt came to our house and took the most beautiful photographs I have ever seen! He was the consummate professional and a great person on top of that. Wish we were selling more homes so we could work with him more often! Will definitely keep him in mind for future ventures.",
+    quote: "Today Matt came to our house and took the most beautiful photographs I have ever seen! He was the consummate professional and a great person on top of that. Will definitely keep him in mind for future ventures.",
     pinned: false,
   },
   {
@@ -99,7 +100,79 @@ const reviews: Review[] = [
   {
     name: 'Tracy Brown',
     role: 'Real Estate Photography',
-    quote: "Matt is the best! My clients are always super impressed with the photos I deliver from his photography. Matt is always helpful before, during, and after the shoots. The marketing kit is a great add on — it makes your listing stand out! You and your clients will never be disappointed!",
+    quote: "Matt is the best! My clients are always super impressed with the photos I deliver. Matt is always helpful before, during, and after the shoots. The marketing kit is a great add on — it makes your listing stand out! You and your clients will never be disappointed!",
+    pinned: false,
+  },
+  {
+    name: 'Kathy Ketabi',
+    role: 'Real Estate Photography',
+    quote: "Matt is super talented. Very professional and super patient. He takes his time to walk through the house and take all the pictures and videos you need. Super happy with his company. Will recommend him to all my coworkers.",
+    pinned: false,
+  },
+  {
+    name: 'Natalie Zarour',
+    role: 'Photography Client',
+    quote: "I recently worked with Matthew. The experience was nothing short of amazing. His patience and expertise turned what could have been a stressful process into a smooth and enjoyable one. His ability to capture the essence of each moment, combined with his calm and patient demeanor, made the entire shoot feel effortless. The final product was stunning, exceeding my expectations in every way. He is now my go to photographer!",
+    pinned: false,
+  },
+  {
+    name: 'Chris Tarta',
+    role: 'Local Guide · Real Estate',
+    quote: "Matt has done a number of shoots for me and my team. His service is outstanding and the packages he has for marketing are even better. He has quickly become our go-to guy!",
+    pinned: false,
+  },
+  {
+    name: 'Tony Pisacane',
+    role: 'Local Guide · Real Estate',
+    quote: "Professional high quality photos, quick turnaround and a pleasure to work with. Matt delivered on every level and I would highly recommend him to all my colleagues.",
+    pinned: false,
+  },
+  {
+    name: 'Christoulla Crawford',
+    role: 'Real Estate Photography',
+    quote: "Matt is professional and the best photographer I have worked with. He is knowledgeable, reliable, friendly and everyone's favorite!",
+    pinned: false,
+  },
+  {
+    name: 'Dave Molinaro',
+    role: 'Real Estate Photography',
+    quote: "Matt is great! I have used him several times for my listings and his pictures and virtual staging are first class!",
+    pinned: false,
+  },
+  {
+    name: 'Rajeev Sinha',
+    role: 'Real Estate Photography',
+    quote: "Matt is an excellent photographer and I use him for all of my listings! Highly recommended!",
+    pinned: false,
+  },
+  {
+    name: 'Leo Czekalski',
+    role: 'NJ Realtor · Local Guide',
+    quote: "Matt is literally the best photographer ever. You should hire him in a heartbeat!",
+    pinned: false,
+  },
+  {
+    name: 'Fala Huss',
+    role: 'Real Estate Photography',
+    quote: "Matt is an expert in what he does. I use him for all my listings and he does an amazing job!",
+    pinned: false,
+  },
+  {
+    name: 'Eleen Gong',
+    role: 'Real Estate Photography',
+    quote: "Matthew did an excellent job for my photographs! Very quick to respond and very accommodating. Great job!",
+    pinned: false,
+  },
+  {
+    name: 'Nikki Knows Homes',
+    role: 'Local Guide · Real Estate',
+    quote: "Very professional and collaborated with me to design a finished product that followed my vision!",
+    pinned: false,
+  },
+  {
+    name: 'Angela De Leon',
+    role: 'Real Estate Photography',
+    quote: "He was very professional and brought my listing to life.",
     pinned: false,
   },
 ];
