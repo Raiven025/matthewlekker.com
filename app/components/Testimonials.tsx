@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import reviews from '@/app/data/reviews';
 
-const pinned = reviews.filter(r => r.pinned);
+const STORAGE_KEY = 'ml_pinned_reviews';
 
 const Stars = () => (
   <div className="flex gap-1 mb-6">
@@ -37,6 +37,15 @@ export default function Testimonials() {
   const headerRef = useRef(null);
   const inView = useInView(headerRef, { once: true, margin: '-50px' });
   const [translateX, setTranslateX] = useState(0);
+  const [pinned, setPinned] = useState(() => reviews.filter(r => r.pinned));
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      const state: Record<string, boolean> = JSON.parse(stored);
+      setPinned(reviews.filter(r => state[r.name] === true));
+    }
+  }, []);
 
   useEffect(() => {
     const calc = () => {
