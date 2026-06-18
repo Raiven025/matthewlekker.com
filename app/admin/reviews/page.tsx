@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import reviews, { Review } from '@/app/data/reviews';
+import Image from 'next/image';
+import reviews from '@/app/data/reviews';
 
 const STORAGE_KEY = 'ml_pinned_reviews';
 
@@ -80,9 +81,14 @@ export default function AdminReviewsPage() {
               <p className="text-[#888880] text-xs leading-relaxed mb-4 line-clamp-3">
                 &ldquo;{r.quote}&rdquo;
               </p>
-              <div className="border-t border-white/5 pt-3">
-                <p className="text-[#F0EDE8] text-sm font-light">{r.name}</p>
-                <p className="text-[#888880]/60 text-xs mt-0.5">{r.role}</p>
+              <div className="border-t border-white/5 pt-3 flex items-center gap-3">
+                <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border border-[#C8825A]/20">
+                  <Image src={r.photo} alt={r.name} fill sizes="36px" className="object-cover" unoptimized />
+                </div>
+                <div>
+                  <p className="text-[#F0EDE8] text-sm font-light">{r.name}</p>
+                  <p className="text-[#888880]/60 text-xs mt-0.5">{r.role}</p>
+                </div>
               </div>
             </button>
           );
