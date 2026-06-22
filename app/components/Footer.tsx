@@ -43,7 +43,7 @@ export default function Footer() {
             href="tel:+14342535537"
             className="text-[#888880] text-sm hover:text-[#C8825A] transition-colors duration-300"
           >
-            (434) 253-5537
+            434.2.LEKKER <span className="text-[#888880]/50 text-xs">(434-253-5537)</span>
           </a>
           <a
             href="mailto:matthew@matthewlekker.com"

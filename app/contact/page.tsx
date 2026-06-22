@@ -96,7 +96,7 @@ export default function ContactPage() {
                 <div className="border-l border-[#C8825A]/30 pl-5">
                   <p className="text-[#C8825A] text-xs tracking-[0.3em] uppercase mb-1">Phone</p>
                   <a href="tel:+14342535537" className="text-[#F0EDE8]/70 hover:text-[#E8A882] transition-colors text-sm">
-                    (434) 253-5537
+                    434.2.LEKKER <span className="text-[#888880]/60">(434-253-5537)</span>
                   </a>
                 </div>
                 <div className="border-l border-[#C8825A]/30 pl-5">
