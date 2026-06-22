@@ -40,6 +40,12 @@ export default function Footer() {
         {/* Contact   centered */}
         <div className="flex flex-col items-center gap-3 mb-12">
           <a
+            href="tel:+14342535537"
+            className="text-[#888880] text-sm hover:text-[#C8825A] transition-colors duration-300"
+          >
+            (434) 253-5537
+          </a>
+          <a
             href="mailto:matthew@matthewlekker.com"
             className="text-[#888880] text-sm hover:text-[#C8825A] transition-colors duration-300"
           >
