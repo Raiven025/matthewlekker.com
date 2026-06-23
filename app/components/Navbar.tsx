@@ -61,7 +61,7 @@ export default function Navbar() {
           {/* CTA */}
           <a
             href="tel:+14342535537"
-            className="hidden md:block border border-[#C8825A] text-[#C8825A] text-xs tracking-[0.25em] uppercase px-5 py-2.5 hover:bg-[#C8825A] hover:text-black transition-all duration-300"
+            className="hidden md:block copper-gradient text-black text-xs tracking-[0.25em] uppercase px-5 py-2.5 hover:opacity-90 transition-all duration-300 font-medium"
           >
             434.2.LEKKER
           </a>
