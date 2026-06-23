@@ -129,7 +129,7 @@ export default function PortfolioPage() {
           href="/contact"
           className="inline-block copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium"
         >
-          Book a Shoot
+          Contact Us
         </Link>
       </section>
 

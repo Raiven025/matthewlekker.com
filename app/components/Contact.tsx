@@ -67,20 +67,14 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex justify-center"
         >
           <Link
             href="/contact"
             className="copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium"
           >
-            Start a Project
+            Contact Us
           </Link>
-          <a
-            href="mailto:matthew@matthewlekker.com"
-            className="border border-white/20 text-[#888880] text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#C8825A] hover:text-[#C8825A] transition-all duration-300"
-          >
-            Send an Email
-          </a>
         </motion.div>
 
       </div>

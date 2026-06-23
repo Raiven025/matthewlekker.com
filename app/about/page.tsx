@@ -117,7 +117,7 @@ export default function AboutPage() {
               href="/contact"
               className="inline-flex items-center gap-3 copper-gradient text-black text-xs tracking-[0.3em] uppercase px-8 py-4 hover:opacity-90 transition-all duration-300 font-medium"
             >
-              Start a Project
+              Contact Us
             </Link>
           </motion.div>
 
@@ -213,7 +213,7 @@ export default function AboutPage() {
           href="/contact"
           className="inline-block copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium"
         >
-          Book a Shoot
+          Contact Us
         </Link>
       </section>
 

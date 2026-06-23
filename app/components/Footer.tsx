@@ -19,8 +19,8 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center gap-3 mb-12">
           <Image src="/ml-logo.png" alt="Matthew Lekker Photography" width={48} height={40} className="h-10 w-auto object-contain" />
           <div>
-            <p className="text-[#F0EDE8] text-sm font-light tracking-[0.2em] uppercase leading-tight">Matthew Lekker</p>
-            <p className="text-[#C8825A] text-[10px] tracking-[0.35em] uppercase mt-1">Photography · Worldwide</p>
+            <p className="text-[#F0EDE8] text-lg font-light tracking-[0.2em] uppercase leading-tight">Matthew Lekker</p>
+            <p className="text-[#C8825A] text-sm tracking-[0.3em] uppercase mt-2">Photography · Worldwide</p>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export default function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white/35 text-xs tracking-[0.25em] uppercase hover:text-[#C8825A] transition-colors duration-300"
+              className="text-white/35 text-sm tracking-[0.25em] uppercase hover:text-[#C8825A] transition-colors duration-300"
             >
               {link.label}
             </Link>
@@ -41,13 +41,13 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-3 mb-12">
           <a
             href="tel:+14342535537"
-            className="text-[#888880] text-sm hover:text-[#C8825A] transition-colors duration-300"
+            className="text-[#888880] text-base hover:text-[#C8825A] transition-colors duration-300"
           >
-            434.2.LEKKER <span className="text-[#888880]/50 text-xs">(434-253-5537)</span>
+            434.2.LEKKER <span className="text-[#888880]/50 text-sm">(434-253-5537)</span>
           </a>
           <a
             href="mailto:matthew@matthewlekker.com"
-            className="text-[#888880] text-sm hover:text-[#C8825A] transition-colors duration-300"
+            className="text-[#888880] text-base hover:text-[#C8825A] transition-colors duration-300"
           >
             matthew@matthewlekker.com
           </a>
@@ -55,7 +55,7 @@ export default function Footer() {
             href="https://www.instagram.com/matthewlekker/"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 text-[#888880]/60 text-xs tracking-[0.2em] uppercase hover:text-[#C8825A] transition-colors duration-300"
+            className="inline-flex items-center gap-2 text-[#888880]/60 text-sm tracking-[0.2em] uppercase hover:text-[#C8825A] transition-colors duration-300"
           >
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -71,7 +71,7 @@ export default function Footer() {
           <p className="text-white/40 text-sm tracking-wide">
             © {new Date().getFullYear()} Matthew Lekker Photography. All rights reserved.
           </p>
-          <p className="text-white/25 text-xs tracking-[0.25em] uppercase">
+          <p className="text-white/25 text-sm tracking-[0.25em] uppercase">
             Architecture · Interiors · Hospitality · Worldwide
           </p>
         </div>

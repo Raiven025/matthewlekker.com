@@ -59,12 +59,12 @@ export default function Navbar() {
           </ul>
 
           {/* CTA */}
-          <a
-            href="tel:+14342535537"
+          <Link
+            href="/contact"
             className="hidden md:block copper-gradient text-black text-xs tracking-[0.25em] uppercase px-5 py-2.5 hover:opacity-90 transition-all duration-300 font-medium"
           >
-            Book a Shoot
-          </a>
+            Contact Us
+          </Link>
 
           {/* Hamburger */}
           <button
@@ -114,13 +114,13 @@ export default function Navbar() {
               </motion.div>
             ))}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-              <a
-                href="tel:+14342535537"
+              <Link
+                href="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="mt-4 border border-[#C8825A] text-[#C8825A] text-sm tracking-widest uppercase px-8 py-3 hover:bg-[#C8825A] hover:text-black transition-all"
               >
-                Book a Shoot
-              </a>
+                Contact Us
+              </Link>
             </motion.div>
           </motion.div>
         )}

@@ -67,7 +67,7 @@ export default function ExteriorPage() {
       <section className="px-8 md:px-20 py-20 text-center border-t border-white/5">
         <Link href="/contact"
           className="inline-block copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium">
-          Book an Architecture Shoot
+          Contact Us
         </Link>
       </section>
 
