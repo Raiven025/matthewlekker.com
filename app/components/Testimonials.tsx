@@ -2,10 +2,10 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import reviews from '@/app/data/reviews';
 
 const STORAGE_KEY = 'ml_pinned_reviews';
+const firstName = (name: string) => name.trim().split(/\s+/)[0];
 
 const Stars = () => (
   <div className="flex gap-1 mb-6">
@@ -17,10 +17,17 @@ const Stars = () => (
   </div>
 );
 
-function Avatar({ name, photo }: { name: string; photo: string }) {
+function Avatar({ name }: { name: string }) {
+  const displayName = firstName(name);
+
   return (
-    <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0 border border-[#C8825A]/20">
-      <Image src={photo} alt={name} fill sizes="44px" className="object-cover" unoptimized />
+    <div
+      aria-hidden="true"
+      className="w-11 h-11 rounded-full flex-shrink-0 border border-[#C8825A]/25 bg-[#C8825A]/10 flex items-center justify-center"
+    >
+      <span className="text-[#C8825A] text-sm tracking-[0.15em] uppercase">
+        {displayName.charAt(0)}
+      </span>
     </div>
   );
 }
@@ -100,9 +107,9 @@ export default function Testimonials() {
                 &ldquo;{r.quote}&rdquo;
               </p>
               <div className="flex items-center gap-4 pt-5 border-t border-white/5">
-                <Avatar name={r.name} photo={r.photo} />
+                <Avatar name={r.name} />
                 <div>
-                  <p className="text-[#F0EDE8] text-sm font-light">{r.name}</p>
+                  <p className="text-[#F0EDE8] text-sm font-light">{firstName(r.name)}</p>
                   <p className="text-[#888880]/60 text-xs tracking-wide mt-0.5">{r.role}</p>
                 </div>
               </div>

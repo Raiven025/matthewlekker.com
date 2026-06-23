@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import reviews from '@/app/data/reviews';
 
 const STORAGE_KEY = 'ml_pinned_reviews';
+const firstName = (name: string) => name.trim().split(/\s+/)[0];
 
 export default function AdminReviewsPage() {
   const [state, setState] = useState<Record<string, boolean>>({});
@@ -82,11 +82,16 @@ export default function AdminReviewsPage() {
                 &ldquo;{r.quote}&rdquo;
               </p>
               <div className="border-t border-white/5 pt-3 flex items-center gap-3">
-                <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border border-[#C8825A]/20">
-                  <Image src={r.photo} alt={r.name} fill sizes="36px" className="object-cover" unoptimized />
+                <div
+                  aria-hidden="true"
+                  className="w-9 h-9 rounded-full flex-shrink-0 border border-[#C8825A]/25 bg-[#C8825A]/10 flex items-center justify-center"
+                >
+                  <span className="text-[#C8825A] text-xs tracking-[0.15em] uppercase">
+                    {firstName(r.name).charAt(0)}
+                  </span>
                 </div>
                 <div>
-                  <p className="text-[#F0EDE8] text-sm font-light">{r.name}</p>
+                  <p className="text-[#F0EDE8] text-sm font-light">{firstName(r.name)}</p>
                   <p className="text-[#888880]/60 text-xs mt-0.5">{r.role}</p>
                 </div>
               </div>
