@@ -73,7 +73,7 @@ export default function Contact() {
             href="/contact"
             className="copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium"
           >
-            Start a Project
+            Contact Us
           </Link>
           <a
             href="mailto:matthew@matthewlekker.com"

@@ -62,9 +62,9 @@ export default function Navbar() {
           {/* CTA */}
           <Link
             href="/contact"
-            className="hidden md:block border border-[#C8825A] text-[#C8825A] text-xs tracking-[0.25em] uppercase px-5 py-2.5 hover:bg-[#C8825A] hover:text-black transition-all duration-300"
+            className="hidden md:block copper-gradient text-black text-xs tracking-[0.25em] uppercase px-5 py-2.5 hover:opacity-90 transition-all duration-300 font-medium"
           >
-            Book a Shoot
+            Contact Us
           </Link>
 
           {/* Hamburger */}
@@ -120,7 +120,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="mt-4 border border-[#C8825A] text-[#C8825A] text-sm tracking-widest uppercase px-8 py-3 hover:bg-[#C8825A] hover:text-black transition-all"
               >
-                Book a Shoot
+                Contact Us
               </Link>
             </motion.div>
           </motion.div>
