@@ -69,18 +69,18 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <a
-            href="tel:+14342535537"
-            className="copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium"
-          >
-            Call 434.2.LEKKER
-          </a>
           <Link
             href="/contact"
+            className="copper-gradient text-black text-xs tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-all duration-300 font-medium"
+          >
+            Start a Project
+          </Link>
+          <a
+            href="mailto:matthew@matthewlekker.com"
             className="border border-white/20 text-[#888880] text-xs tracking-[0.3em] uppercase px-12 py-4 hover:border-[#C8825A] hover:text-[#C8825A] transition-all duration-300"
           >
-            Send a Message
-          </Link>
+            Send an Email
+          </a>
         </motion.div>
 
       </div>

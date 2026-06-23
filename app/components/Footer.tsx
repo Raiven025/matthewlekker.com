@@ -68,10 +68,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-6 border-t border-white/5 flex flex-col items-center gap-2 text-center">
-          <p className="text-white/15 text-xs tracking-wide">
+          <p className="text-white/40 text-sm tracking-wide">
             © {new Date().getFullYear()} Matthew Lekker Photography. All rights reserved.
           </p>
-          <p className="text-white/10 text-xs tracking-[0.25em] uppercase">
+          <p className="text-white/25 text-xs tracking-[0.25em] uppercase">
             Architecture · Interiors · Hospitality · Worldwide
           </p>
         </div>

@@ -63,7 +63,7 @@ export default function Navbar() {
             href="tel:+14342535537"
             className="hidden md:block copper-gradient text-black text-xs tracking-[0.25em] uppercase px-5 py-2.5 hover:opacity-90 transition-all duration-300 font-medium"
           >
-            434.2.LEKKER
+            Book a Shoot
           </a>
 
           {/* Hamburger */}
@@ -119,7 +119,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="mt-4 border border-[#C8825A] text-[#C8825A] text-sm tracking-widest uppercase px-8 py-3 hover:bg-[#C8825A] hover:text-black transition-all"
               >
-                434.2.LEKKER
+                Book a Shoot
               </a>
             </motion.div>
           </motion.div>
