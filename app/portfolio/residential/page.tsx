@@ -66,10 +66,13 @@ const photos = [
   { src: '/images/Interiors/LEKK9060.jpeg', alt: 'Luxury residential interior   NJ photography' },
 ];
 
+const PAGE_SIZE = 20;
+
 export default function ResidentialPage() {
   const gridRef = useRef(null);
   const inView = useInView(gridRef, { once: true, margin: '-80px' });
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [visible, setVisible] = useState(PAGE_SIZE);
 
   return (
     <div className="bg-[#0D0D0D]">
@@ -90,7 +93,7 @@ export default function ResidentialPage() {
 
       <section ref={gridRef} className="px-8 md:px-20 py-24 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
-          {photos.map((photo, i) => (
+          {photos.slice(0, visible).map((photo, i) => (
             <motion.button key={i}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -110,6 +113,16 @@ export default function ResidentialPage() {
             </motion.button>
           ))}
         </div>
+        {visible < photos.length && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setVisible(v => v + PAGE_SIZE)}
+              className="border border-[#C8825A] text-[#C8825A] text-xs tracking-[0.3em] uppercase px-10 py-3 hover:bg-[#C8825A] hover:text-black transition-all duration-300"
+            >
+              Load More ({photos.length - visible} remaining)
+            </button>
+          </div>
+        )}
       </section>
 
       <section className="px-8 md:px-20 py-20 text-center border-t border-white/5">
