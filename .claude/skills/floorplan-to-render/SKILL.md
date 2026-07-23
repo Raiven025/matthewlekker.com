@@ -6,7 +6,7 @@ description: Turn an uploaded 2D floor plan into a 3D "dollhouse" floor plan vis
 # Floor Plan → 3D Render Workflow
 
 Converts a 2D floor plan (photo, scan, or PDF export) into:
-1. A 3D isometric "dollhouse" floor plan (optionally an interactive 3D model), and/or
+1. A 3D isometric "dollhouse" floor plan image, and/or
 2. Ultra-realistic, photograph-quality renders of each individual room, styled with the
    client's chosen materials and furniture.
 
@@ -17,16 +17,37 @@ preserved from the source plan, but dimensions are not construction-grade. Say s
 
 ## Tools used
 
-- `media_upload_widget` / `media_import_url` — get the floor plan image into the system
-- `mcp__Higgsfield__models_explore` — pick the right model per step (`action: recommend`)
-- `mcp__Higgsfield__generate_image` — the 3D dollhouse render and each room render
-- `mcp__Higgsfield__generate_3d` (`image_to_3d`) — optional rotatable GLB of the dollhouse render
-- `mcp__Higgsfield__upscale_image` — final 2K/4K delivery pass
+- `scripts/gemini-render.mjs` — calls the Gemini API directly for **every** image generated
+  by this skill (the 3D dollhouse render and each room render). Requires `GEMINI_API_KEY`
+  in the environment (see "Setup" below).
 - `AskUserQuestion` — collect style/material/furniture/output-mode choices up front
 - `SendUserFile` — deliver the final set
 
-Always call `get_cost: true` before running a full multi-room batch and report the estimated
-credits before generating more than ~4 images — floor plans with many rooms add up fast.
+**Never use Higgsfield (or any `mcp__Higgsfield__*` tool) for images in this skill.**
+Higgsfield is reserved strictly for video work elsewhere in this project — not photos,
+not renders, not the 3D floor plan. All rendering here goes through Gemini.
+
+There is no interactive-3D/GLB step in this workflow — that required a mesh-generation
+tool this skill deliberately does not use. Output is the 2D dollhouse-style image only.
+
+## Setup
+
+1. Get a Gemini API key at https://aistudio.google.com/apikey.
+2. Add it as an environment variable named `GEMINI_API_KEY` for this environment (do not
+   paste the key into chat). A new session is needed for the variable to be visible.
+3. Optionally set `GEMINI_IMAGE_MODEL` to override the default model
+   (`gemini-3-pro-image-preview`) — e.g. drop to `gemini-2.5-flash-image` if Pro access
+   isn't available.
+4. Run the script from the repo root:
+   ```
+   node .claude/skills/floorplan-to-render/scripts/gemini-render.mjs \
+     --prompt "..." \
+     --image path/to/floorplan.jpg \
+     --out path/to/output.png \
+     --aspect-ratio 16:9
+   ```
+   `--image` may be repeated to pass multiple reference images (e.g. the floor plan plus
+   a prior room render, for continuity). Omit `--image` for a text-only generation.
 
 ## Step 1 — Ingest the floor plan
 
@@ -57,18 +78,19 @@ rest with a consistent, tasteful default and state what you chose.
 
 ## Step 3 — Generate the 3D dollhouse floor plan
 
-1. `models_explore(action: 'recommend', type: 'image', input: 'image', query: 'isometric dollhouse 3D floor plan render from 2D blueprint, all rooms visible, no roof')`
-2. Upload the source floor plan as a reference image.
-3. `generate_image` with the floor plan as a reference media and a prompt that specifies:
+Call `gemini-render.mjs` with the source floor plan passed via `--image` as a reference,
+and a prompt that specifies:
    - "isometric / axonometric dollhouse-style 3D floor plan, roof removed, camera looking
      down at ~45°"
    - the exact room layout, wall positions, and door/window openings from Step 1 — do not
      let the model invent a different layout
    - the confirmed material palette applied per room
    - clean architectural-visualization lighting (not moody — this is a layout reference)
-4. Optional: feed the resulting image into `generate_3d` (`image_to_3d`) to produce a
-   rotatable GLB model for interactive presentation.
-5. `upscale_image` the chosen result to 4K.
+   - request the largest resolution/aspect ratio suited to the plan's proportions via
+     `--aspect-ratio`
+
+If the result doesn't match the source layout closely enough, retry with a more explicit
+prompt (call out the specific mismatch) rather than accepting a wrong layout.
 
 ## Step 4 — Generate ultra-realistic per-room renders
 
@@ -83,17 +105,18 @@ For each room in scope, build one detailed prompt covering:
 - Photographic quality tags: ultra-realistic, natural light, shallow depth of field where
   appropriate, interior-design-magazine quality, 4K
 
-Pass the floor plan (and, when available, the Step 3 dollhouse render) as reference media
-so room proportions and opening placement stay consistent with the plan and with each other.
-Generate up to 4 variations per room if the user wants options; otherwise 1 is fine.
-`upscale_image` the selected result per room to 4K.
+Pass the floor plan (and, when available, the Step 3 dollhouse render) via `--image` so room
+proportions and opening placement stay consistent with the plan and with each other. Run the
+script once per room; run it multiple times with the same prompt if the user wants variations
+to choose from — there's no batch/count flag, each call produces one image.
 
 ## Step 5 — Consistency across rooms
 
 Keep the same design language across the whole set unless the user asks for a room-specific
-departure: same material palette logic, same lighting time-of-day, and chain reference
-images/job_ids room-to-room so adjoining spaces (e.g. an open kitchen/living area) read as
-one continuous space rather than mismatched generations.
+departure: same material palette logic, same lighting time-of-day, and pass the neighboring
+room's already-generated image as an extra `--image` reference when generating an adjoining
+space (e.g. an open kitchen/living area) so they read as one continuous space rather than
+mismatched generations.
 
 ## Step 6 — Iteration
 
@@ -105,7 +128,7 @@ set. Offer this explicitly after delivering the first pass.
 
 Package and send via `SendUserFile`:
 
-- The 3D dollhouse floor plan (image, plus GLB if generated)
+- The 3D dollhouse floor plan image
 - One final image per room, clearly labeled by room name
 
 State plainly which choices were defaults vs. user-specified, and remind the user this is a
